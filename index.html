@@ -109,9 +109,10 @@
 
   .cover{position:absolute;inset:0;z-index:3;border:0;cursor:pointer;color:var(--cream);font-family:var(--sans);display:flex;align-items:flex-end;justify-content:flex-start;gap:22px;padding:44px;text-align:left;
     background:
-      radial-gradient(ellipse at 78% 20%,rgba(255,128,23,.28),transparent 55%),
-      radial-gradient(ellipse at 10% 100%,rgba(0,131,224,.22),transparent 55%),
-      linear-gradient(160deg,#1B2147 0%,#0A0D1C 70%);
+      linear-gradient(to top,rgba(10,13,28,.88) 0%,rgba(10,13,28,.35) 38%,rgba(10,13,28,0) 65%),
+      linear-gradient(to right,rgba(10,13,28,.45) 0%,rgba(10,13,28,0) 45%),
+      url("images/jims-story.jpg") center/cover no-repeat,
+      #0A0D1C;
     transition:opacity .4s ease}
   .cover::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");pointer-events:none}
   .cover-play{width:88px;height:88px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;flex-shrink:0;transition:transform .2s ease,background .2s ease;box-shadow:0 0 0 0 rgba(255,128,23,.5);animation:pulse 2.6s ease-out infinite}
@@ -352,7 +353,7 @@
       <p class="lead">Jim walked into Men of Integrity carrying the same secret a lot of men carry. This is his story.</p>
     </div>
     <div class="player reveal" id="player" data-state="idle">
-      <video id="vid" playsinline preload="none" aria-label="Jim's Story"></video>
+      <video id="vid" playsinline preload="none" poster="images/jims-story.jpg" aria-label="Jim's Story"></video>
 
       <button class="cover" id="cover" aria-label="Play Jim's Story">
         <span class="cover-play"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
@@ -498,10 +499,9 @@
         <a class="res" href="https://www.youtube.com/playlist?list=PLTXc7KJv_ODqB0u-HPwsWXtg03MCgyVjn" target="_blank" rel="noopener"><div><div class="type">YouTube</div><h4>Joy Recovery Radio</h4><div class="by">Video playlist</div></div><div class="go">Watch &rarr;</div></a>
         <a class="res" href="https://podcasts.apple.com/us/podcast/joy-recovery-radio/id1793658785" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Joy Recovery Radio</h4><div class="by">Apple Podcasts</div></div><div class="go">Listen &rarr;</div></a>
         <a class="res" href="https://restored2more.buzzsprout.com" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Restored2More</h4></div><div class="go">Listen &rarr;</div></a>
-        <a class="res" href="https://faithfulandtrue.com/the-faithful-true-podcast/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Faithful &amp; True</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://www.faithfulandtrue.com/podcast" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Faithful &amp; True</h4></div><div class="go">Listen &rarr;</div></a>
         <a class="res" href="https://recoveredman.com/category/pfr/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Recovered Man</h4></div><div class="go">Listen &rarr;</div></a>
-        <a class="res" href="https://puredesire.org/podcasts/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Desire</h4></div><div class="go">Listen &rarr;</div></a>
-        <a class="res" href="https://www.puresexradio.com/listen.html" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Sex Radio</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://www.youtube.com/user/puredesireTV" target="_blank" rel="noopener"><div><div class="type">YouTube</div><h4>Pure Desire</h4><div class="by">Video channel</div></div><div class="go">Watch &rarr;</div></a>
         <a class="res" href="https://podcasts.apple.com/us/podcast/pure-victory-podcast/id1510639399" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Victory Podcast</h4><div class="by">Apple Podcasts</div></div><div class="go">Listen &rarr;</div></a>
       </div>
     </div>
