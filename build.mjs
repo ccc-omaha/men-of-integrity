@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import nunjucks from "nunjucks";
+import { icon, typeIcon } from "./src/icons.mjs";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const DIST = path.join(ROOT, "dist");
@@ -85,6 +86,8 @@ env.addFilter("md", t => new nunjucks.runtime.SafeString(md(t)));
 env.addFilter("jsonscript", v => new nunjucks.runtime.SafeString(jsonscript(v)));
 env.addFilter("file", f => new nunjucks.runtime.SafeString(fs.readFileSync(path.join(ROOT, "src", f), "utf8")));
 env.addFilter("slug", slug);
+env.addFilter("icon", (n, size) => new nunjucks.runtime.SafeString(icon(n, size)));
+env.addFilter("typeicon", (t, size) => new nunjucks.runtime.SafeString(typeIcon(t, size)));
 env.addFilter("pad", n => String(n).padStart(2, "0"));
 
 const html = env.render("index.njk", {

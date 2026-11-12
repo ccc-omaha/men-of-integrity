@@ -160,6 +160,11 @@ content:
             collapsed: true
             summary: "{title}"
         fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values: [shield, sprout, dawn, book, people, compass, anchor, lock]
           - name: title
             label: Title
             type: string
@@ -302,7 +307,7 @@ content:
               - name: type
                 label: Small label
                 type: string
-                description: "Example: Book, Podcast, YouTube, Website"
+                description: "Example: Book, Podcast, YouTube, Website, Filter. The matching icon is added automatically."
               - name: url
                 label: Link
                 type: string

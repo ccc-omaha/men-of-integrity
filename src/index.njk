@@ -58,6 +58,8 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="topo" aria-hidden="true"></div>
+  {{ "ridge-hero.svg" | file }}
   <div class="wrap">
     <div class="eyebrow">{{ top.eyebrow }}</div>
     <h1>{{ top.headline }} <em>{{ top.headlineAccent }}</em></h1>
@@ -105,7 +107,7 @@
     </div>
     <div class="pillar-grid reveal">
       {% for p in pillars.items %}
-      <div class="pillar"><div class="num">{{ loop.index | pad }}</div><h3>{{ p.title }}</h3><p>{{ p.text | md }}</p></div>
+      <div class="pillar"><div class="pillar-top"><span class="pillar-ic">{{ (p.icon or "compass") | icon(30) }}</span><span class="num">{{ loop.index | pad }}</span></div><h3>{{ p.title }}</h3><p>{{ p.text | md }}</p></div>
       {% endfor %}
     </div>
   </div>
@@ -185,6 +187,7 @@
 
 <!-- VISIT -->
 <section id="visit" class="visit">
+  <div class="topo" aria-hidden="true"></div>
   <div class="wrap">
     <div class="reveal">
       <div class="eyebrow">{{ meeting.eyebrow }}</div>
@@ -193,12 +196,12 @@
     <div class="visit-grid">
       <div class="visit-card reveal">
         <div class="row">
-          <div class="label">When</div>
+          <div class="label">{{ "calendar" | icon(16) }}When</div>
           <div class="big">{{ meeting.day }}</div>
           <p>{{ meeting.time }}{% if meeting.timeNote %}, {{ meeting.timeNote }}{% endif %}</p>
         </div>
         <div class="row">
-          <div class="label">Where</div>
+          <div class="label">{{ "pin" | icon(16) }}Where</div>
           <div class="big">{{ meeting.venue }}</div>
           <p>{{ meeting.address | md }}</p>
         </div>
@@ -207,7 +210,7 @@
         </div>
       </div>
       <div class="visit-card reveal">
-        <div class="label">{{ meeting.contactLabel }}</div>
+        <div class="label">{{ "message" | icon(16) }}{{ meeting.contactLabel }}</div>
         <div class="contact-person">
           <div class="avatar">{{ meeting.contactName | first }}</div>
           <div><strong>{{ meeting.contactName }}</strong><span>{{ meeting.contactRole }}</span></div>
@@ -248,7 +251,7 @@
       {% if c.intro %}<p class="panel-intro">{{ c.intro | md }}</p>{% endif %}
       <div class="res-grid">
         {% for r in c.items %}
-        <a class="res" href="{{ r.url }}" target="_blank" rel="noopener"><div>{% if r.type %}<div class="type">{{ r.type }}</div>{% endif %}<h4>{{ r.title }}</h4>{% if r.by %}<div class="by">{{ r.by }}</div>{% endif %}</div><div class="go">{{ r.action or "View" }} &rarr;</div></a>
+        <a class="res" href="{{ r.url }}" target="_blank" rel="noopener"><div>{% if r.type %}<div class="type">{{ r.type | typeicon(14) }}{{ r.type }}</div>{% endif %}<h4>{{ r.title }}</h4>{% if r.by %}<div class="by">{{ r.by }}</div>{% endif %}</div><div class="go">{{ r.action or "View" }} &rarr;</div></a>
         {% endfor %}
       </div>
     </div>
@@ -298,6 +301,8 @@
 
 <!-- CLOSING -->
 <section class="closing">
+  <div class="topo" aria-hidden="true"></div>
+  {{ "ridge-closing.svg" | file }}
   <div class="wrap">
     <div class="eyebrow">{{ closing.eyebrow }}</div>
     <h2>{{ closing.heading }}</h2>
