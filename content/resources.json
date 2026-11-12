@@ -1,0 +1,157 @@
+{
+  "eyebrow": "Resources for Continued Growth",
+  "heading": "Keep going between Tuesdays.",
+  "intro": "These books, podcasts and sites have shaped our leaders. They're a solid place to start.",
+  "categories": [
+    {
+      "name": "Books",
+      "intro": "Books that will help you understand what's driving your behavior and how recovery actually works.",
+      "items": [
+        {
+          "type": "Book",
+          "title": "Unwanted",
+          "by": "Jay Stringer",
+          "url": "https://www.amazon.com/dp/1631466720",
+          "action": "View"
+        },
+        {
+          "type": "Book",
+          "title": "Pure Desire",
+          "by": "Ted Roberts",
+          "url": "https://www.amazon.com/dp/0764215663",
+          "action": "View"
+        },
+        {
+          "type": "Book",
+          "title": "The Seven Desires of Every Heart",
+          "by": "Mark & Debbie Laaser",
+          "url": "https://a.co/d/0bjFB0He",
+          "action": "View"
+        },
+        {
+          "type": "Book",
+          "title": "Out of the Shadows",
+          "by": "Patrick Carnes",
+          "url": "https://www.amazon.com/dp/1568386214",
+          "action": "View"
+        }
+      ]
+    },
+    {
+      "name": "Podcasts & Video",
+      "intro": "Listen on your commute, at the gym, or anytime you need a reminder that you're not alone.",
+      "items": [
+        {
+          "type": "YouTube",
+          "title": "Joy Recovery Radio",
+          "by": "Video playlist",
+          "url": "https://www.youtube.com/playlist?list=PLTXc7KJv_ODqB0u-HPwsWXtg03MCgyVjn",
+          "action": "Watch"
+        },
+        {
+          "type": "Podcast",
+          "title": "Joy Recovery Radio",
+          "by": "Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/joy-recovery-radio/id1793658785",
+          "action": "Listen"
+        },
+        {
+          "type": "Podcast",
+          "title": "Restored2More",
+          "by": "",
+          "url": "https://restored2more.buzzsprout.com",
+          "action": "Listen"
+        },
+        {
+          "type": "Podcast",
+          "title": "Faithful & True",
+          "by": "",
+          "url": "https://www.faithfulandtrue.com/podcast",
+          "action": "Listen"
+        },
+        {
+          "type": "Podcast",
+          "title": "Recovered Man",
+          "by": "",
+          "url": "https://recoveredman.com/category/pfr/",
+          "action": "Listen"
+        },
+        {
+          "type": "YouTube",
+          "title": "Pure Desire",
+          "by": "Video channel",
+          "url": "https://www.youtube.com/user/puredesireTV",
+          "action": "Watch"
+        },
+        {
+          "type": "Podcast",
+          "title": "Pure Victory Podcast",
+          "by": "Apple Podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/pure-victory-podcast/id1510639399",
+          "action": "Listen"
+        }
+      ]
+    },
+    {
+      "name": "Filters & Accountability",
+      "intro": "Install a filter on every device you use, including your phone. Have reports sent to a trusted accountability partner, and ask that person before you sign them up.",
+      "items": [
+        {
+          "type": "Accountability",
+          "title": "Covenant Eyes",
+          "by": "Screen accountability and filtering",
+          "url": "https://www.covenanteyes.com/",
+          "action": "Visit"
+        },
+        {
+          "type": "Filter",
+          "title": "Net Nanny",
+          "by": "Content filtering",
+          "url": "https://www.netnanny.com/",
+          "action": "Visit"
+        }
+      ]
+    },
+    {
+      "name": "Websites",
+      "intro": "Ministries and organizations doing serious work in sexual recovery.",
+      "items": [
+        {
+          "type": "Website",
+          "title": "Pure Desire",
+          "by": "",
+          "url": "https://puredesire.org/",
+          "action": "Visit"
+        },
+        {
+          "type": "Website",
+          "title": "Faithful & True",
+          "by": "",
+          "url": "https://www.faithfulandtrue.com/",
+          "action": "Visit"
+        },
+        {
+          "type": "Website",
+          "title": "Joy Recovery",
+          "by": "",
+          "url": "https://www.joy-recovery.com/",
+          "action": "Visit"
+        },
+        {
+          "type": "Website",
+          "title": "BeBroken",
+          "by": "",
+          "url": "https://www.bebroken.org/",
+          "action": "Visit"
+        },
+        {
+          "type": "Website",
+          "title": "XXXchurch",
+          "by": "",
+          "url": "https://www.xxxchurch.com/",
+          "action": "Visit"
+        }
+      ]
+    }
+  ]
+}

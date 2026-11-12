@@ -1,0 +1,28 @@
+{
+  "show": true,
+  "eyebrow": "For the Betrayed Partner",
+  "heading": "Your healing matters too.",
+  "text": "If you're the wife or partner of a man in recovery, the pain you're carrying is real and deserves care of its own. These books were written with you in mind.",
+  "books": [
+    {
+      "title": "Intimate Deception",
+      "author": "Dr. Sheri Keffer",
+      "url": "https://www.amazon.com/dp/0800735056"
+    },
+    {
+      "title": "Rescued",
+      "author": "Shelley Martinkus",
+      "url": "https://www.amazon.com/dp/0982638272"
+    },
+    {
+      "title": "Facing Heartbreak",
+      "author": "Stephanie Carnes",
+      "url": "https://www.amazon.com/dp/098327133X"
+    },
+    {
+      "title": "From Betrayal Trauma to Healing & Joy",
+      "author": "Marsha Means",
+      "url": "https://www.amazon.com/dp/1654271039"
+    }
+  ]
+}

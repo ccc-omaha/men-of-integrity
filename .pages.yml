@@ -1,0 +1,399 @@
+# Pages CMS configuration for findintegrity.com
+# Staff edit at https://app.pagescms.org. Saving commits to GitHub,
+# and Netlify rebuilds the page (about 1 minute).
+# Formatting in text boxes: *italic*, **bold**, [link text](https://...), and Enter for a new line.
+
+settings:
+  commit:
+    identity: user
+
+media:
+  input: public/images
+  output: /images
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  # ---------------------------------------------------------------
+  - name: meeting
+    label: "1. Meeting time, place and contact"
+    type: file
+    path: content/meeting.json
+    format: json
+    fields:
+      - name: day
+        label: Meeting day
+        type: string
+        description: "Example: Tuesdays"
+      - name: time
+        label: Meeting time
+        type: string
+        description: "Example: 6:30 to 8:00 PM"
+      - name: timeNote
+        label: Time note
+        type: string
+        description: "Short note after the time, like: every week. Leave blank to hide."
+      - name: venue
+        label: Room or building
+        type: string
+        description: "Example: CCC Student Center"
+      - name: address
+        label: Address
+        type: text
+        description: "Press Enter for a new line. The top of the page shows the street and city from the last line."
+      - name: directionsUrl
+        label: Directions link
+        type: string
+        description: "Google Maps link for the Get Directions button."
+      - name: contactName
+        label: Contact name
+        type: string
+        description: "The first name is used on the Text buttons (Text Jon)."
+      - name: contactRole
+        label: Contact role
+        type: string
+      - name: phone
+        label: Contact cell phone
+        type: string
+        description: "Format like 402-306-0847. Every Text button on the page uses this number."
+      - name: email
+        label: Contact email
+        type: string
+        description: "Leave blank to hide the email link and button."
+      - name: contactLabel
+        label: Contact card label
+        type: string
+      - name: contactText
+        label: Contact card paragraph
+        type: text
+      - name: eyebrow
+        label: Section small label
+        type: string
+      - name: heading
+        label: Section heading
+        type: string
+
+  # ---------------------------------------------------------------
+  - name: top
+    label: "2. Top of page"
+    type: file
+    path: content/top.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small orange label
+        type: string
+      - name: headline
+        label: Big title, white part
+        type: string
+      - name: headlineAccent
+        label: Big title, orange italic part
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: primaryButton
+        label: Orange button text
+        type: string
+        description: "Jumps to the meeting details."
+      - name: secondaryButton
+        label: Outline button text
+        type: string
+        description: "Opens a text message to the contact phone in section 1."
+      - name: openGroupText
+        label: Open group note
+        type: string
+        description: "Shows under Open Group in the info row."
+
+  # ---------------------------------------------------------------
+  - name: about
+    label: "3. What is Men of Integrity?"
+    type: file
+    path: content/about.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: lead
+        label: First paragraph (larger)
+        type: text
+      - name: body
+        label: Second paragraph
+        type: text
+      - name: openNote
+        label: Green dot note
+        type: string
+      - name: verse
+        label: Scripture verse
+        type: text
+        description: "Include the quotation marks. Leave blank to hide the verse card."
+      - name: verseRef
+        label: Scripture reference
+        type: string
+
+  # ---------------------------------------------------------------
+  - name: pillars
+    label: "4. Mission (five commitments)"
+    type: file
+    path: content/pillars.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: items
+        label: Commitments
+        type: object
+        description: "Numbers (01, 02...) are added automatically. Five fits the layout best."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: text
+            label: Description
+            type: text
+
+  # ---------------------------------------------------------------
+  - name: story
+    label: "5. Story video"
+    type: file
+    path: content/story.json
+    format: json
+    fields:
+      - name: show
+        label: Show this section
+        type: boolean
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: title
+        label: Video title
+        type: string
+        description: "Shows on the video cover and in the top menu."
+      - name: coverLabel
+        label: Small label above the video title
+        type: string
+      - name: poster
+        label: Cover image
+        type: image
+        description: "16:9 still from the video. Keep files under 2 MB. Larger photos are shrunk automatically after upload."
+      - name: vimeoId
+        label: Vimeo video number
+        type: string
+        description: "The number at the end of the Vimeo link. Example: 480879135"
+      - name: hlsUrl
+        label: Vimeo stream link (.m3u8)
+        type: string
+        description: "Powers the custom player. Leave blank to use Vimeo's standard player instead. Ask Eric if you're not sure."
+
+  # ---------------------------------------------------------------
+  - name: steps
+    label: "6. First steps"
+    type: file
+    path: content/steps.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: items
+        label: Steps
+        type: object
+        description: "Step numbers are added automatically. Three fits the layout best."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: text
+            label: Description
+            type: text
+          - name: linkText
+            label: Link text
+            type: string
+          - name: linkUrl
+            label: Link
+            type: string
+            description: "A web address, #visit for the meeting details, or #tab- plus a resource tab's first word (example: #tab-filters)."
+      - name: reassureTitle
+        label: Callout bold text
+        type: string
+      - name: reassureText
+        label: Callout text
+        type: text
+        description: "Leave blank to hide the callout."
+
+  # ---------------------------------------------------------------
+  - name: resources
+    label: "7. Resources"
+    type: file
+    path: content/resources.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: categories
+        label: Tabs
+        type: object
+        description: "Each tab is a category. Drag to reorder. The first tab shows by default."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Tab name
+            type: string
+            description: "Start each tab with a different word. The first word is used for #tab- links."
+          - name: intro
+            label: Tab intro
+            type: text
+          - name: items
+            label: Resources
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: by
+                label: Author or note
+                type: string
+                description: "Optional. Shows under the title."
+              - name: type
+                label: Small label
+                type: string
+                description: "Example: Book, Podcast, YouTube, Website"
+              - name: url
+                label: Link
+                type: string
+              - name: action
+                label: Link word
+                type: select
+                options:
+                  values: [View, Listen, Watch, Visit]
+
+  # ---------------------------------------------------------------
+  - name: partners
+    label: "8. For the betrayed partner"
+    type: file
+    path: content/partners.json
+    format: json
+    fields:
+      - name: show
+        label: Show this section
+        type: boolean
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: text
+        label: Paragraph
+        type: text
+      - name: books
+        label: Books
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: author
+            label: Author
+            type: string
+          - name: url
+            label: Link
+            type: string
+
+  # ---------------------------------------------------------------
+  - name: closing
+    label: "9. Bottom call to action"
+    type: file
+    path: content/closing.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: text
+        label: Paragraph
+        type: text
+      - name: primaryButton
+        label: Orange button text
+        type: string
+      - name: secondaryButton
+        label: Outline button text
+        type: string
+
+  # ---------------------------------------------------------------
+  - name: settings
+    label: "10. Google and sharing"
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: seoTitle
+        label: Browser tab and Google title
+        type: string
+      - name: seoDescription
+        label: Google description
+        type: text
+        description: "The gray text under the title in search results. About 150 to 160 characters."
+      - name: shareTitle
+        label: Share title
+        type: string
+        description: "Title shown when the link is shared in a text or on social."
+      - name: shareDescription
+        label: Share description
+        type: text
+      - name: shareImage
+        label: Share image
+        type: image
+        description: "1200 x 630 JPG works best. Shows when the link is shared."

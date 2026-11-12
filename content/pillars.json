@@ -1,0 +1,27 @@
+{
+  "eyebrow": "Our Mission",
+  "heading": "Five commitments guide every Tuesday.",
+  "intro": "This isn't a lecture or a quick fix. It's a community built on a few things we take seriously.",
+  "items": [
+    {
+      "title": "Safety",
+      "text": "A place where men are loved and accepted as they are, not as they pretend to be."
+    },
+    {
+      "title": "Healing",
+      "text": "Helping men meet God in the middle of their struggle, not after they've cleaned it up."
+    },
+    {
+      "title": "Honesty",
+      "text": "Building an authentic life with nothing left to hide."
+    },
+    {
+      "title": "Education",
+      "text": "Learning how recovery works and getting tools you can use immediately."
+    },
+    {
+      "title": "Accountability",
+      "text": "Men who walk with you, keep you honest, and hold out real hope for purity."
+    }
+  ]
+}
