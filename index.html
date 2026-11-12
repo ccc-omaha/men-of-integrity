@@ -41,6 +41,9 @@
   h2{font-size:clamp(34px,4.4vw,54px);margin:14px 0 20px}
   h3{font-size:26px}
   p{max-width:62ch}
+  /* Prevent orphaned words */
+  h1,h2,h3,h4,.cover-title,.quote-card .q{text-wrap:balance}
+  p,.lead,.by,.panel-intro,.reassure,.open-tag{text-wrap:pretty}
   .lead{font-size:21px;color:var(--text-dim)}
 
   /* Buttons */
@@ -570,6 +573,17 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Orphan control fallback: bind the last two words of each text block with a non-breaking space
+  document.querySelectorAll('h1,h2,h3,h4,p,.lead,.quote-card .q,.panel-intro,.open-tag').forEach(el => {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    let last = null, n;
+    while ((n = walker.nextNode())) if (n.nodeValue.trim()) last = n;
+    if (!last) return;
+    const words = el.textContent.trim().split(/\s+/);
+    if (words.length < 4) return;
+    last.nodeValue = last.nodeValue.replace(/\s+(\S+\s*)$/, ' $1');
+  });
 
   // Header state
   const header = document.querySelector('header');
