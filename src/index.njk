@@ -193,6 +193,12 @@
       <div class="eyebrow">{{ meeting.eyebrow }}</div>
       <h2>{{ meeting.heading }}</h2>
     </div>
+    {% if meeting.showBuilding %}
+    <figure class="building-fig reveal">
+      {{ "student-center.svg" | file }}
+      {% if meeting.buildingCaption %}<figcaption>{{ "pin" | icon(16) }}{{ meeting.buildingCaption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
     <div class="visit-grid">
       <div class="visit-card reveal">
         <div class="row">

@@ -12,5 +12,7 @@
   "contactRole": "Men of Integrity Leader",
   "contactText": "Have a question, or want to talk before your first Tuesday? Jon is glad to hear from you. A text works great.",
   "phone": "402-306-0847",
-  "email": "builderbakes@gmail.com"
+  "email": "builderbakes@gmail.com",
+  "showBuilding": true,
+  "buildingCaption": "Look for the Student Center sign and head in the front doors."
 }

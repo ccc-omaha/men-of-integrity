@@ -1,0 +1,102 @@
+<svg class="building" viewBox="0 118 1200 402" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of the CCC Student Center entrance at night, with the front doors lit">
+  <defs>
+    <radialGradient id="sc-glow" cx="600" cy="360" r="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8017" stop-opacity=".38"/>
+      <stop offset=".45" stop-color="#FF8017" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#FF8017" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sc-door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB273"/>
+      <stop offset="1" stop-color="#FF8017"/>
+    </linearGradient>
+    <linearGradient id="sc-walk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8017" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#FF8017" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="sc-brick" width="22" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 9.5h22M11 0v4.75M0 4.75h22M0 4.75v4.75M22 4.75v4.75" stroke="#FBEFDA" stroke-opacity=".14" stroke-width=".8" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- warm spill of light -->
+  <rect y="118" width="1200" height="402" fill="url(#sc-glow)"/>
+
+  <g stroke="#FBEFDA" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <!-- ground -->
+    <path d="M0 412h1200" stroke-opacity=".35" stroke-width="1.2"/>
+
+    <!-- main building body -->
+    <rect x="70" y="214" width="1080" height="198" fill="#141936" stroke-opacity=".5" stroke-width="1.4"/>
+    <!-- upper fascia panels -->
+    <path d="M70 262h1080" stroke-opacity=".35" stroke-width="1"/>
+    <path d="M190 214v48M310 214v48M800 214v48M920 214v48M1040 214v48" stroke-opacity=".14" stroke-width="1"/>
+    <!-- window band -->
+    <rect x="86" y="276" width="236" height="58" fill="#0B0E20" stroke-opacity=".3" stroke-width="1"/>
+    <rect x="760" y="276" width="374" height="58" fill="#0B0E20" stroke-opacity=".3" stroke-width="1"/>
+    <path d="M125 276v58M164 276v58M203 276v58M242 276v58M281 276v58" stroke-opacity=".18" stroke-width="1"/>
+    <path d="M802 276v58M844 276v58M886 276v58M928 276v58M970 276v58M1012 276v58M1054 276v58M1096 276v58" stroke-opacity=".18" stroke-width="1"/>
+    <!-- a few lit windows -->
+    <rect x="928" y="277" width="41" height="56" fill="#FF8017" fill-opacity=".14" stroke="none"/>
+    <rect x="164" y="277" width="38" height="56" fill="#FF8017" fill-opacity=".1" stroke="none"/>
+    <!-- brick base -->
+    <rect x="70" y="334" width="1080" height="78" fill="url(#sc-brick)" stroke="none"/>
+    <path d="M70 334h1080" stroke-opacity=".3" stroke-width="1"/>
+
+    <!-- sign block -->
+    <path d="M334 232h92v180h-92z" fill="#1C2149" stroke-opacity=".55" stroke-width="1.4"/>
+    <path d="M334 232l92 0" stroke-opacity=".7" stroke-width="1.4"/>
+
+    <!-- brick tower -->
+    <rect x="438" y="150" width="64" height="262" fill="#1A1F44" stroke-opacity=".55" stroke-width="1.4"/>
+    <rect x="438" y="150" width="64" height="262" fill="url(#sc-brick)" stroke="none"/>
+    <path d="M434 150h72" stroke-opacity=".6" stroke-width="2"/>
+
+    <!-- entrance recess -->
+    <rect x="512" y="290" width="168" height="122" fill="#0B0E20" stroke-opacity=".4" stroke-width="1"/>
+    <!-- lit doors -->
+    <rect x="526" y="304" width="140" height="108" fill="url(#sc-door)" fill-opacity=".9" stroke="none"/>
+    <path d="M561 304v108M596 304v108M631 304v108M526 330h140" stroke="#0A0D1C" stroke-opacity=".55" stroke-width="2.4"/>
+    <path d="M583 360v14M609 360v14" stroke="#0A0D1C" stroke-opacity=".7" stroke-width="2.4"/>
+
+    <!-- canopy -->
+    <path d="M500 268h268v20H500z" fill="#0B0E20" stroke-opacity=".6" stroke-width="1.4"/>
+    <path d="M504 288h260" stroke="#FFB273" stroke-opacity=".5" stroke-width="1.2"/>
+
+    <!-- right brick pillar -->
+    <rect x="690" y="288" width="44" height="124" fill="#1A1F44" stroke-opacity=".55" stroke-width="1.4"/>
+    <rect x="690" y="288" width="44" height="124" fill="url(#sc-brick)" stroke="none"/>
+
+    <!-- wall lamps -->
+    <circle cx="510" cy="318" r="4" fill="#FFB273" stroke="none"/>
+    <circle cx="742" cy="318" r="4" fill="#FFB273" stroke="none"/>
+    <circle cx="510" cy="318" r="14" fill="#FF8017" fill-opacity=".18" stroke="none"/>
+    <circle cx="742" cy="318" r="14" fill="#FF8017" fill-opacity=".18" stroke="none"/>
+
+    <!-- walkway with light spill -->
+    <path d="M540 412h112l150 108H384z" fill="url(#sc-walk)" stroke="none"/>
+    <path d="M540 412 384 520M652 412l150 108" stroke-opacity=".3" stroke-width="1.2"/>
+    <path d="M500 452h188M462 486h264" stroke-opacity=".12" stroke-width="1"/>
+
+    <!-- shrubs -->
+    <path d="M300 412c4-16 18-24 30-18 6-12 24-14 32-2 10-8 26-4 30 10 8-4 20 0 22 10" fill="#10142C" stroke-opacity=".4" stroke-width="1.2"/>
+    <path d="M742 412c6-12 20-16 30-8 8-10 26-8 32 4 10-6 24-2 28 8 10-6 26-2 30 8 10-6 24 0 26 10" fill="#10142C" stroke-opacity=".4" stroke-width="1.2"/>
+    <path d="M880 412c4-10 16-14 26-8 8-8 22-6 28 4 8-4 20-2 22 6" fill="#10142C" stroke-opacity=".35" stroke-width="1.2"/>
+    <path d="M1000 412c6-10 18-12 26-6 10-8 26-6 30 6 10-4 22 0 24 8" fill="#10142C" stroke-opacity=".35" stroke-width="1.2"/>
+
+    <!-- tree, left -->
+    <path d="M150 412c2-40 2-80 0-118" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M150 340c-14-12-28-16-40-14M150 318c14-14 28-18 42-14" stroke-opacity=".4" stroke-width="1.4"/>
+    <path d="M150 140c-34 0-58 22-60 48-26 6-40 30-34 56 4 24 26 40 50 40 10 16 28 22 46 18 18 6 38-2 48-18 26-2 46-22 46-48 0-24-16-42-38-48-4-28-28-48-58-48z" fill="#10142C" stroke-opacity=".5" stroke-width="1.4"/>
+    <path d="M108 214c10-10 24-14 36-10M170 196c12-4 26 0 34 10M124 262c12 6 26 6 38 0M178 250c10 4 22 2 30-6" stroke-opacity=".22" stroke-width="1.2"/>
+
+    <!-- bollard -->
+    <path d="M820 470v-46" stroke-opacity=".45" stroke-width="5"/>
+    <circle cx="820" cy="422" r="2.5" fill="#FFB273" stroke="none"/>
+  </g>
+
+  <!-- sign lettering -->
+  <g font-family="ivypresto-display, Georgia, serif" fill="#FBEFDA" fill-opacity=".85">
+    <text x="345" y="264" font-size="17">Student</text>
+    <text x="345" y="284" font-size="17">Center</text>
+  </g>
+</svg>

@@ -72,6 +72,13 @@ content:
       - name: heading
         label: Section heading
         type: string
+      - name: showBuilding
+        label: Show Student Center illustration
+        type: boolean
+        description: "Turn off if the group moves to a different building."
+      - name: buildingCaption
+        label: Illustration caption
+        type: string
 
   # ---------------------------------------------------------------
   - name: top
