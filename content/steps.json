@@ -4,24 +4,27 @@
   "intro": "If you're reading this, something in you wants to change. That's the first step. Here are the next three.",
   "items": [
     {
+      "icon": "compass",
       "title": "Get honest with yourself",
       "text": "Take a free, private self-assessment. Answer truthfully. It's for you, and nobody else sees the results.",
       "linkText": "Take the assessment",
       "linkUrl": "https://www.sexhelp.com/"
     },
     {
+      "icon": "calendar",
       "title": "Show up on a Tuesday",
       "text": "You don't need to sign up or have your story figured out. If walking in cold feels like a lot, text Jon first.",
       "linkText": "Where and when",
       "linkUrl": "#visit"
     },
     {
+      "icon": "lock",
       "title": "Close the open doors",
       "text": "Install filtering and accountability software on every device you use, and send the reports to someone you trust.",
       "linkText": "See recommended tools",
       "linkUrl": "#tab-filters"
     }
   ],
-  "reassureTitle": "Nervous about walking in?",
-  "reassureText": "Every man in the room walked in for the first time once. What's shared in the group stays in the group."
+  "reassureTitle": "",
+  "reassureText": ""
 }

@@ -237,12 +237,17 @@ content:
       - name: items
         label: Steps
         type: object
-        description: "Step numbers are added automatically. Three fits the layout best."
+        description: "Shown as a path. Three fits the layout best."
         list:
           collapsible:
             collapsed: true
             summary: "{title}"
         fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values: [compass, calendar, lock, dawn, shield, sprout, book, people, message, pin, anchor]
           - name: title
             label: Title
             type: string
@@ -262,7 +267,7 @@ content:
       - name: reassureText
         label: Callout text
         type: text
-        description: "Leave blank to hide the callout."
+        description: "Optional. Leave blank to hide the callout (hidden now; the FAQ covers it)."
 
   # ---------------------------------------------------------------
   - name: resources
@@ -280,8 +285,39 @@ content:
       - name: intro
         label: Intro paragraph
         type: text
+      - name: featured
+        label: Start here picks
+        type: object
+        description: "Three highlighted resources shown first. The full list opens with a See all button."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: by
+            label: Author or note
+            type: string
+          - name: type
+            label: Small label
+            type: string
+            description: "Example: Book, Podcast, YouTube, Website, Accountability. Sets the icon."
+          - name: note
+            label: Why it helps
+            type: text
+            description: "One short sentence."
+          - name: url
+            label: Link
+            type: string
+          - name: action
+            label: Link word
+            type: select
+            options:
+              values: [View, Listen, Watch, Visit]
       - name: categories
-        label: Tabs
+        label: Full list tabs
         type: object
         description: "Each tab is a category. Drag to reorder. The first tab shows by default."
         list:
@@ -326,7 +362,7 @@ content:
 
   # ---------------------------------------------------------------
   - name: partners
-    label: "8. For the betrayed partner"
+    label: "8. For the betrayed partner (fold-out bar)"
     type: file
     path: content/partners.json
     format: json
@@ -395,7 +431,7 @@ content:
 
   # ---------------------------------------------------------------
   - name: closing
-    label: "10. Bottom call to action"
+    label: "10. Bottom call to action (card next to FAQ)"
     type: file
     path: content/closing.json
     format: json

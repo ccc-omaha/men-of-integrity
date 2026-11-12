@@ -1,7 +1,33 @@
 {
   "eyebrow": "Resources for Continued Growth",
   "heading": "Keep going between Tuesdays.",
-  "intro": "These books, podcasts and sites have shaped our leaders. They're a solid place to start.",
+  "intro": "Not sure where to begin? Start with one of these three.",
+  "featured": [
+    {
+      "type": "Book",
+      "title": "Unwanted",
+      "by": "Jay Stringer",
+      "note": "Looks at what's underneath unwanted sexual behavior, not just how to stop it.",
+      "url": "https://www.amazon.com/dp/1631466720",
+      "action": "View"
+    },
+    {
+      "type": "Accountability",
+      "title": "Covenant Eyes",
+      "by": "Screen accountability",
+      "note": "Install it on your phone and computer, and pick someone you trust to see the reports.",
+      "url": "https://www.covenanteyes.com/",
+      "action": "Visit"
+    },
+    {
+      "type": "Podcast",
+      "title": "Joy Recovery Radio",
+      "by": "Apple Podcasts",
+      "note": "Honest conversations for men in recovery. Easy to start on a commute.",
+      "url": "https://podcasts.apple.com/us/podcast/joy-recovery-radio/id1793658785",
+      "action": "Listen"
+    }
+  ],
   "categories": [
     {
       "name": "Books",
