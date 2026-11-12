@@ -350,8 +350,40 @@ content:
             type: string
 
   # ---------------------------------------------------------------
+  - name: faq
+    label: "9. Common questions (FAQ)"
+    type: file
+    path: content/faq.json
+    format: json
+    fields:
+      - name: show
+        label: Show this section
+        type: boolean
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
+        label: Heading
+        type: string
+      - name: items
+        label: Questions
+        type: object
+        description: "These also show up in Google results, so phrase questions the way a man would search them."
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{question}"
+        fields:
+          - name: question
+            label: Question
+            type: string
+          - name: answer
+            label: Answer
+            type: text
+
+  # ---------------------------------------------------------------
   - name: closing
-    label: "9. Bottom call to action"
+    label: "10. Bottom call to action"
     type: file
     path: content/closing.json
     format: json
@@ -374,7 +406,7 @@ content:
 
   # ---------------------------------------------------------------
   - name: settings
-    label: "10. Google and sharing"
+    label: "11. Google and sharing"
     type: file
     path: content/settings.json
     format: json
@@ -382,6 +414,7 @@ content:
       - name: seoTitle
         label: Browser tab and Google title
         type: string
+        description: "Under 60 characters. Lead with what men search for, like porn addiction help."
       - name: seoDescription
         label: Google description
         type: text
@@ -396,4 +429,4 @@ content:
       - name: shareImage
         label: Share image
         type: image
-        description: "1200 x 630 JPG works best. Shows when the link is shared."
+        description: "1200 x 630 JPG works best. Shows when the link is shared in a text or on social."

@@ -11,7 +11,7 @@ const SITE = { url: "https://findintegrity.com" };
 
 const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, f), "utf8"));
 const C = Object.fromEntries(
-  ["settings", "top", "about", "pillars", "story", "steps", "meeting", "resources", "partners", "closing"]
+  ["settings", "top", "about", "pillars", "story", "steps", "meeting", "resources", "partners", "faq", "closing"]
     .map(n => [n, read(`content/${n}.json`)])
 );
 
@@ -36,14 +36,44 @@ const lastLine = addrLines[addrLines.length - 1] || "";
 const addressShort = lastLine.split(",").slice(0, 2).map(s => s.trim()).join(", ");
 const abs = p => !p ? "" : p.startsWith("http") ? p : SITE.url + (p.startsWith("/") ? p : "/" + p);
 
-const orgSchema = {
+const plain = t => String(t ?? "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*+([^*]+)\*+/g, "$1").replace(/\n/g, " ");
+// Parse "10825 Harney St, Omaha, NE 68154" into a postal address for Google
+const [street = "", city = "", stateZip = ""] = lastLine.split(",").map(s => s.trim());
+const [region = "", postalCode = ""] = stateZip.split(/\s+/);
+const schema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Men of Integrity",
-  url: SITE.url,
-  description: C.settings.seoDescription,
-  parentOrganization: { "@type": "Organization", name: "Christ Community Church", url: "https://cccomaha.org" },
-  location: { "@type": "Place", name: `${M.venue}, Christ Community Church`, address: lastLine },
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE.url}/#website`,
+      url: `${SITE.url}/`,
+      name: "Men of Integrity",
+      description: C.settings.seoDescription,
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE.url}/#org`,
+      name: "Men of Integrity",
+      alternateName: "MOI",
+      url: `${SITE.url}/`,
+      logo: `${SITE.url}/icon-512.png`,
+      description: C.settings.seoDescription,
+      areaServed: { "@type": "City", name: "Omaha, Nebraska" },
+      parentOrganization: { "@type": "Church", name: "Christ Community Church", url: "https://cccomaha.org" },
+      location: {
+        "@type": "Place",
+        name: `${M.venue}, Christ Community Church`,
+        address: { "@type": "PostalAddress", streetAddress: street, addressLocality: city, addressRegion: region, postalCode, addressCountry: "US" },
+      },
+      contactPoint: { "@type": "ContactPoint", contactType: "Group leader", name: M.contactName, telephone: `+1-${M.phone}` },
+    },
+    ...(C.faq.show && (C.faq.items || []).length ? [{
+      "@type": "FAQPage",
+      "@id": `${SITE.url}/#faq`,
+      mainEntity: C.faq.items.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: plain(f.answer) } })),
+    }] : []),
+  ],
 };
 
 /* ---------- build ---------- */
@@ -58,7 +88,7 @@ env.addFilter("slug", slug);
 env.addFilter("pad", n => String(n).padStart(2, "0"));
 
 const html = env.render("index.njk", {
-  site: SITE, ...C, orgSchema,
+  site: SITE, ...C, schema,
   smsHref: `sms:${digits}`,
   firstName: String(M.contactName || "").split(" ")[0],
   addressShort,
@@ -66,4 +96,6 @@ const html = env.render("index.njk", {
   year: new Date().getFullYear(),
 });
 fs.writeFileSync(path.join(DIST, "index.html"), html);
+fs.writeFileSync(path.join(DIST, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${SITE.url}/</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>\n</urlset>\n`);
 console.log(`Built findintegrity.com: ${C.resources.categories.reduce((n, c) => n + (c.items || []).length, 0)} resources in ${C.resources.categories.length} tabs.`);

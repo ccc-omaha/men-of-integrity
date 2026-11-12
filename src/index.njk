@@ -5,18 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ settings.seoTitle }}</title>
 <meta name="description" content="{{ settings.seoDescription }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="{{ site.url }}/">
-<meta property="og:title" content="{{ settings.shareTitle }}">
-<meta property="og:description" content="{{ settings.shareDescription }}">
+<meta name="theme-color" content="#0A0D1C">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:site_name" content="Men of Integrity">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}/">
+<meta property="og:title" content="{{ settings.shareTitle }}">
+<meta property="og:description" content="{{ settings.shareDescription }}">
 {% if settings.shareImage %}<meta property="og:image" content="{{ shareImageAbs }}">
-<meta name="twitter:card" content="summary_large_image">{% endif %}
+<meta property="og:image:alt" content="{{ settings.shareTitle }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ shareImageAbs }}">{% endif %}
+<meta name="twitter:title" content="{{ settings.shareTitle }}">
+<meta name="twitter:description" content="{{ settings.shareDescription }}">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="preconnect" href="https://p.typekit.net" crossorigin>
 <link rel="stylesheet" href="https://use.typekit.net/ohw6ayv.css">
 <style>
 {{ "styles.css" | file }}
 </style>
-<script type="application/ld+json">{{ orgSchema | jsonscript }}</script>
+<script type="application/ld+json">{{ schema | jsonscript }}</script>
 </head>
 <body>
 
@@ -257,6 +271,26 @@
         <a href="{{ b.url }}" target="_blank" rel="noopener"><div><strong>{{ b.title }}</strong><span>{{ b.author }}</span></div><span class="arrow">View &rarr;</span></a>
         {% endfor %}
       </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if faq.show and faq.items.length %}
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <div class="eyebrow">{{ faq.eyebrow }}</div>
+      <h2>{{ faq.heading }}</h2>
+    </div>
+    <div class="faq-list reveal">
+      {% for f in faq.items %}
+      <details{% if loop.first %} open{% endif %}>
+        <summary>{{ f.question }}<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer"><p>{{ f.answer | md }}</p></div>
+      </details>
+      {% endfor %}
     </div>
   </div>
 </section>
