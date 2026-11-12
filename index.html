@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men of Integrity | Freedom from Sexual Sin | Omaha, NE</title>
+<meta name="description" content="Men of Integrity is a confidential weekly group for men who want freedom from lust, pornography and sexual sin. Tuesdays, 6:30 to 8 PM at Christ Community Church in Omaha. New men welcome any week.">
+<meta property="og:title" content="Men of Integrity | Omaha, NE">
+<meta property="og:description" content="A safe, honest place for men to find freedom from sexual sin. Tuesdays, 6:30 to 8 PM. New men welcome any week.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.findintegrity.com/">
+<link rel="stylesheet" href="https://use.typekit.net/ohw6ayv.css">
+<style>
+  :root{
+    --ink:#0A0D1C;
+    --ink-2:#121735;
+    --ink-3:#1B2147;
+    --line:rgba(251,239,218,.12);
+    --cream:#FBEFDA;
+    --cream-dim:rgba(251,239,218,.72);
+    --cream-faint:rgba(251,239,218,.5);
+    --paper:#F7F3EC;
+    --text:#1A1D2E;
+    --text-dim:#545868;
+    --accent:#FF8017;
+    --accent-soft:#FFB273;
+    --blue:#0083E0;
+    --radius:14px;
+    --max:1160px;
+    --sans:"proxima-nova",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --serif:"ivypresto-display",Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.6;font-size:18px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+  h2{font-size:clamp(34px,4.4vw,54px);margin:14px 0 20px}
+  h3{font-size:26px}
+  p{max-width:62ch}
+  .lead{font-size:21px;color:var(--text-dim)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,background .2s ease,color .2s ease,border-color .2s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--accent);color:var(--ink)}
+  .btn-primary:hover{background:var(--accent-soft)}
+  .btn-ghost{border:1.5px solid rgba(251,239,218,.35);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--cream)}
+  .btn svg{width:18px;height:18px}
+
+  /* Nav */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s ease,border-color .25s ease;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(10,13,28,.92);backdrop-filter:blur(10px);border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+  .logo-mark{width:38px;height:38px;border:1.5px solid var(--cream);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:17px;letter-spacing:.02em}
+  .logo-text{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px}
+  .nav-links{display:flex;gap:34px;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;color:var(--cream-dim);font-size:15px;font-weight:600;transition:color .2s}
+  .nav-links a:hover{color:var(--cream)}
+  .nav-links .btn{padding:10px 20px;font-size:14px;color:var(--ink)}
+  .menu-btn{display:none;background:none;border:0;color:var(--cream);cursor:pointer;padding:8px}
+  .menu-btn svg{width:26px;height:26px}
+
+  /* Hero */
+  .hero{background:var(--ink);color:var(--cream);position:relative;overflow:hidden;padding:170px 0 120px}
+  .hero::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-260px;background:radial-gradient(circle,rgba(255,128,23,.16),transparent 62%);pointer-events:none}
+  .hero::after{content:"";position:absolute;width:700px;height:700px;left:-280px;bottom:-380px;background:radial-gradient(circle,rgba(0,131,224,.14),transparent 62%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(50px,8vw,104px);max-width:11ch;margin:22px 0 28px}
+  .hero h1 em{font-style:italic;color:var(--accent-soft)}
+  .hero p{font-size:clamp(19px,2vw,23px);color:var(--cream-dim);max-width:44ch}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);font-size:15px;color:var(--cream-faint)}
+  .hero-meta strong{color:var(--cream);font-weight:600;display:block;font-size:17px}
+
+  section{padding:120px 0}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:start}
+  .about p+p{margin-top:18px}
+  .quote-card{background:var(--ink-2);color:var(--cream);border-radius:var(--radius);padding:44px;position:relative}
+  .quote-card .q{font-family:var(--serif);font-size:30px;line-height:1.25}
+  .quote-card .ref{margin-top:20px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft);font-weight:700}
+  .open-tag{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:700;font-size:16px}
+  .open-tag .dot{width:10px;height:10px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 5px rgba(43,182,115,.18)}
+
+  /* Pillars */
+  .pillars{background:var(--ink);color:var(--cream)}
+  .pillars .lead{color:var(--cream-dim)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:60px}
+  .pillar{background:var(--ink);padding:38px 28px 44px;transition:background .25s}
+  .pillar:hover{background:var(--ink-2)}
+  .pillar .num{font-family:var(--serif);font-size:18px;color:var(--accent)}
+  .pillar h3{margin:56px 0 12px;font-size:28px}
+  .pillar p{font-size:16px;color:var(--cream-dim)}
+
+  /* Story */
+  .story{background:var(--ink-2);color:var(--cream)}
+  .story .lead{color:var(--cream-dim)}
+  .player{position:relative;aspect-ratio:16/9;margin-top:52px;border-radius:var(--radius);overflow:hidden;background:#000;box-shadow:0 40px 80px -40px rgba(0,0,0,.6);user-select:none}
+  .player video,.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+  .player:fullscreen{border-radius:0}
+  .player.no-cursor{cursor:none}
+
+  .cover{position:absolute;inset:0;z-index:3;border:0;cursor:pointer;color:var(--cream);font-family:var(--sans);display:flex;align-items:flex-end;justify-content:flex-start;gap:22px;padding:44px;text-align:left;
+    background:
+      radial-gradient(ellipse at 78% 20%,rgba(255,128,23,.28),transparent 55%),
+      radial-gradient(ellipse at 10% 100%,rgba(0,131,224,.22),transparent 55%),
+      linear-gradient(160deg,#1B2147 0%,#0A0D1C 70%);
+    transition:opacity .4s ease}
+  .cover::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");pointer-events:none}
+  .cover-play{width:88px;height:88px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;flex-shrink:0;transition:transform .2s ease,background .2s ease;box-shadow:0 0 0 0 rgba(255,128,23,.5);animation:pulse 2.6s ease-out infinite}
+  .cover-play svg{width:44px;height:44px;margin-left:5px}
+  .cover:hover .cover-play{transform:scale(1.06);background:var(--accent-soft)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,128,23,.45)}70%{box-shadow:0 0 0 22px rgba(255,128,23,0)}100%{box-shadow:0 0 0 0 rgba(255,128,23,0)}}
+  .cover-text{display:flex;flex-direction:column;position:relative;z-index:1}
+  .cover-eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-soft)}
+  .cover-title{font-family:var(--serif);font-size:clamp(34px,5vw,60px);line-height:1}
+  .player:not([data-state="idle"]) .cover{opacity:0;pointer-events:none}
+
+  .spinner{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;border:3px solid rgba(251,239,218,.2);border-top-color:var(--cream);animation:spin .8s linear infinite;z-index:2;opacity:0;pointer-events:none;transition:opacity .2s}
+  .player[data-state="loading"] .spinner{opacity:1}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .controls{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;gap:14px;padding:46px 20px 16px;background:linear-gradient(to top,rgba(10,13,28,.9),rgba(10,13,28,0));color:var(--cream);opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s;pointer-events:none}
+  .player[data-state="paused"] .controls,
+  .player.show-ui .controls{opacity:1;transform:none;pointer-events:auto}
+  .player[data-state="idle"] .controls{display:none}
+  .ctl{background:none;border:0;color:inherit;cursor:pointer;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;flex-shrink:0;transition:background .2s}
+  .ctl:hover{background:rgba(251,239,218,.12)}
+  .ctl svg{width:22px;height:22px}
+  .ctl .i-pause,.ctl .i-muted{display:none}
+  .player[data-state="playing"] .i-play{display:none}
+  .player[data-state="playing"] .i-pause{display:block}
+  .player.muted .i-vol{display:none}
+  .player.muted .i-muted{display:block}
+  .time{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--cream-dim);min-width:40px;text-align:center}
+  .scrub{position:relative;flex:1;height:22px;cursor:pointer;display:flex;align-items:center;outline:none}
+  .scrub::before{content:"";position:absolute;left:0;right:0;height:4px;border-radius:4px;background:rgba(251,239,218,.2)}
+  .scrub-buf,.scrub-fill{position:absolute;left:0;height:4px;border-radius:4px;width:0}
+  .scrub-buf{background:rgba(251,239,218,.35)}
+  .scrub-fill{background:var(--accent)}
+  .scrub-knob{position:absolute;right:-7px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--cream);transform:scale(0);transition:transform .15s}
+  .scrub:hover .scrub-knob,.scrub:focus-visible .scrub-knob,.scrub.dragging .scrub-knob{transform:scale(1)}
+  .scrub:hover::before,.scrub:hover .scrub-buf,.scrub:hover .scrub-fill{height:6px}
+  @media (max-width:600px){
+    .cover{padding:24px;gap:16px}
+    .cover-play{width:64px;height:64px}
+    .cover-play svg{width:32px;height:32px}
+    .controls{gap:6px;padding:36px 10px 8px}
+    .time{font-size:12px;min-width:34px}
+    #t-dur{display:none}
+  }
+
+  /* First steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+  .step{background:#fff;border-radius:var(--radius);padding:38px;border:1px solid #E7E1D6;display:flex;flex-direction:column}
+  .step-n{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-weight:700;font-size:16px}
+  .step h3{margin:26px 0 12px}
+  .step p{font-size:17px;color:var(--text-dim);flex:1}
+  .step a.link{margin-top:22px;font-weight:700;color:var(--ink);text-decoration:none;display:inline-flex;gap:8px;align-items:center;font-size:16px}
+  .step a.link:hover{color:#C55F05}
+  .reassure{margin-top:48px;padding:30px 36px;border-left:3px solid var(--accent);background:#fff;border-radius:0 var(--radius) var(--radius) 0;font-size:19px;max-width:none}
+  .reassure p{max-width:none}
+
+  /* Visit */
+  .visit{background:var(--ink-2);color:var(--cream)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+  .visit-card{background:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:44px}
+  .visit-card .label{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint)}
+  .visit-card .big{font-family:var(--serif);font-size:40px;line-height:1.1;margin:14px 0 6px}
+  .visit-card p{color:var(--cream-dim)}
+  .visit-card .row{padding:22px 0;border-bottom:1px solid var(--line)}
+  .visit-card .row:first-child{padding-top:0}
+  .visit-card .row:last-of-type{border-bottom:0}
+  .visit-card .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .contact-person{display:flex;align-items:center;gap:18px;margin:18px 0 8px}
+  .avatar{width:60px;height:60px;border-radius:50%;background:var(--ink-3);display:grid;place-items:center;font-family:var(--serif);font-size:24px;color:var(--accent-soft);flex-shrink:0}
+  .contact-person strong{font-size:22px;display:block}
+  .contact-person span{color:var(--cream-faint);font-size:15px}
+  .contact-lines a{display:block;text-decoration:none;color:var(--cream);font-size:19px;padding:6px 0}
+  .contact-lines a:hover{color:var(--accent-soft)}
+
+  /* Resources */
+  .res-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+  .tabs{display:flex;flex-wrap:wrap;gap:10px;margin:48px 0 36px}
+  .tab{font-family:var(--sans);background:transparent;border:1.5px solid #D8D1C3;color:var(--text);padding:11px 20px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;transition:all .2s}
+  .tab:hover{border-color:var(--ink)}
+  .tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+  .panel{display:none}
+  .panel.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .panel-intro{color:var(--text-dim);margin-bottom:28px;font-size:18px}
+  .res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .res{display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:#fff;border:1px solid #E7E1D6;border-radius:12px;padding:26px;text-decoration:none;min-height:150px;transition:border-color .2s,transform .2s,box-shadow .2s}
+  .res:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 12px 30px -18px rgba(10,13,28,.35)}
+  .res .type{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C55F05}
+  .res h4{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;margin-top:8px}
+  .res .by{font-size:15px;color:var(--text-dim);margin-top:4px}
+  .res .go{font-size:14px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:6px}
+
+  /* Partner callout */
+  .partner{background:var(--paper);padding:0 0 120px}
+  .partner-box{background:#fff;border:1px solid #E7E1D6;border-radius:var(--radius);padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .partner-box h2{font-size:clamp(30px,3.4vw,42px);margin-top:12px}
+  .partner-list a{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid #EDE7DC;text-decoration:none}
+  .partner-list a:first-child{padding-top:0}
+  .partner-list a:last-child{border-bottom:0}
+  .partner-list strong{font-family:var(--serif);font-weight:400;font-size:23px;display:block}
+  .partner-list span{color:var(--text-dim);font-size:15px}
+  .partner-list .arrow{color:#C55F05;font-weight:700;white-space:nowrap;font-size:15px}
+  .partner-list a:hover strong{color:#C55F05}
+
+  /* Closing CTA */
+  .closing{background:var(--ink);color:var(--cream);text-align:center;padding:130px 0;position:relative;overflow:hidden}
+  .closing::before{content:"";position:absolute;inset:auto 0 -420px 0;margin:auto;width:900px;height:700px;background:radial-gradient(circle,rgba(255,128,23,.14),transparent 62%)}
+  .closing .wrap{position:relative}
+  .closing h2{font-size:clamp(40px,6vw,74px);max-width:16ch;margin:16px auto 22px}
+  .closing p{margin:0 auto;color:var(--cream-dim);font-size:20px}
+  .closing .hero-cta{justify-content:center}
+
+  footer{background:var(--ink);color:var(--cream-faint);border-top:1px solid var(--line);padding:40px 0;font-size:14px}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--cream-dim);text-decoration:none}
+  footer a:hover{color:var(--cream)}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  @media (max-width:1000px){
+    .pillar-grid{grid-template-columns:repeat(2,1fr)}
+    .pillar:last-child{grid-column:span 2}
+    .pillar h3{margin-top:30px}
+    .about-grid,.partner-box{grid-template-columns:1fr;gap:44px}
+    .steps{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    .nav-links{position:fixed;inset:76px 0 auto 0;background:var(--ink);flex-direction:column;gap:0;padding:12px 28px 28px;border-bottom:1px solid var(--line);display:none;align-items:stretch}
+    .nav-links.open{display:flex}
+    .nav-links li a{display:block;padding:14px 0;font-size:18px}
+    .nav-links .btn{margin-top:12px;justify-content:center;padding:14px}
+    .menu-btn{display:block}
+    header.menu-open{background:var(--ink)}
+  }
+  @media (max-width:600px){
+    body{font-size:17px}
+    section{padding:84px 0}
+    .wrap{padding:0 22px}
+    .hero{padding:140px 0 84px}
+    .pillar-grid{grid-template-columns:1fr}
+    .pillar:last-child{grid-column:auto}
+    .quote-card,.visit-card,.step{padding:30px}
+    .partner-box{padding:32px}
+    .partner{padding-bottom:84px}
+    .hero-cta .btn{width:100%;justify-content:center}
+    .partner-list a{flex-direction:column;gap:6px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Men of Integrity home">
+      <span class="logo-mark">MI</span>
+      <span class="logo-text">Men of Integrity</span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#story">Jim's Story</a></li>
+      <li><a href="#start">First Steps</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="sms:4023060847" class="btn btn-primary">Text Jon</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Men of Integrity &middot; Omaha, NE</div>
+    <h1>A life of integrity <em>starts here.</em></h1>
+    <p>A confidential, judgment-free group for men who want freedom from lust, pornography and sexual sin. You don't have to keep fighting this alone.</p>
+    <div class="hero-cta">
+      <a href="#visit" class="btn btn-primary">Plan Your First Tuesday
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="sms:4023060847" class="btn btn-ghost">Text Jon Privately</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>Tuesdays</strong>6:30 to 8:00 PM</div>
+      <div><strong>CCC Student Center</strong>10825 Harney St, Omaha</div>
+      <div><strong>Open Group</strong>Start any week</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">What Is Men of Integrity?</div>
+      <h2>An honest room for an issue most men hide.</h2>
+      <p class="lead">Men of Integrity (MOI) is part of the Renewal ministry at Christ Community Church in Omaha. We exist for men dealing with sexual brokenness, whether that's pornography, lust, or patterns you've tried to quit on your own and couldn't.</p>
+      <p>Shame thrives in secret. Healing happens in the light, alongside other men who get it. MOI gives you a safe place to be honest, connect with God in the middle of your struggle, and get practical tools you can use right away.</p>
+      <div class="open-tag"><span class="dot"></span>Open group. New men are welcome any Tuesday.</div>
+    </div>
+    <aside class="quote-card reveal">
+      <div class="q">"If we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus his Son cleanses us from all sin."</div>
+      <div class="ref">1 John 1:7</div>
+    </aside>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Our Mission</div>
+      <h2>Five commitments guide every Tuesday.</h2>
+      <p class="lead">This isn't a lecture or a quick fix. It's a community built on a few things we take seriously.</p>
+    </div>
+    <div class="pillar-grid reveal">
+      <div class="pillar"><div class="num">01</div><h3>Safety</h3><p>A place where men are loved and accepted as they are, not as they pretend to be.</p></div>
+      <div class="pillar"><div class="num">02</div><h3>Healing</h3><p>Helping men meet God in the middle of their struggle, not after they've cleaned it up.</p></div>
+      <div class="pillar"><div class="num">03</div><h3>Honesty</h3><p>Building an authentic life with nothing left to hide.</p></div>
+      <div class="pillar"><div class="num">04</div><h3>Education</h3><p>Learning how recovery works and getting tools you can use immediately.</p></div>
+      <div class="pillar"><div class="num">05</div><h3>Accountability</h3><p>Men who walk with you, keep you honest, and hold out real hope for purity.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- JIM'S STORY -->
+<section id="story" class="story">
+  <div class="wrap">
+    <div class="reveal story-head">
+      <div class="eyebrow">Jim's Story</div>
+      <h2>Hear from a man who's been there.</h2>
+      <p class="lead">Jim walked into Men of Integrity carrying the same secret a lot of men carry. This is his story.</p>
+    </div>
+    <div class="player reveal" id="player" data-state="idle">
+      <video id="vid" playsinline preload="none" aria-label="Jim's Story"></video>
+
+      <button class="cover" id="cover" aria-label="Play Jim's Story">
+        <span class="cover-play"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        <span class="cover-text">
+          <span class="cover-eyebrow">Watch</span>
+          <span class="cover-title">Jim's Story</span>
+        </span>
+      </button>
+
+      <div class="spinner" aria-hidden="true"></div>
+
+      <div class="controls" id="controls">
+        <button class="ctl" id="btn-play" aria-label="Play">
+          <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+        </button>
+        <span class="time" id="t-cur">0:00</span>
+        <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="scrub-buf" id="scrub-buf"></div>
+          <div class="scrub-fill" id="scrub-fill"><span class="scrub-knob"></span></div>
+        </div>
+        <span class="time" id="t-dur">0:00</span>
+        <button class="ctl" id="btn-mute" aria-label="Mute">
+          <svg class="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          <svg class="i-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path d="m16 9 6 6M22 9l-6 6"/></svg>
+        </button>
+        <button class="ctl" id="btn-fs" aria-label="Fullscreen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST STEPS -->
+<section id="start">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">New to Recovery?</div>
+      <h2>Three first steps.</h2>
+      <p class="lead">If you're reading this, something in you wants to change. That's the first step. Here are the next three.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-n">1</div>
+        <h3>Get honest with yourself</h3>
+        <p>Take a free, private self-assessment. Answer truthfully. It's for you, and nobody else sees the results.</p>
+        <a class="link" href="https://www.sexhelp.com/" target="_blank" rel="noopener">Take the assessment &rarr;</a>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">2</div>
+        <h3>Show up on a Tuesday</h3>
+        <p>You don't need to sign up or have your story figured out. Just come. If walking in cold feels like a lot, text Jon first.</p>
+        <a class="link" href="#visit">Where and when &rarr;</a>
+      </div>
+      <div class="step reveal">
+        <div class="step-n">3</div>
+        <h3>Close the open doors</h3>
+        <p>Install filtering and accountability software on every device you use, and send the reports to someone you trust.</p>
+        <a class="link" href="#resources" data-tab="filters">See recommended tools &rarr;</a>
+      </div>
+    </div>
+    <div class="reassure reveal">
+      <p><strong>Nervous about walking in?</strong> Every man in the room walked in for the first time once. What's shared in the group stays in the group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Join Us</div>
+      <h2>Tuesday nights in Omaha.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card reveal">
+        <div class="row">
+          <div class="label">When</div>
+          <div class="big">Tuesdays</div>
+          <p>6:30 to 8:00 PM, every week</p>
+        </div>
+        <div class="row">
+          <div class="label">Where</div>
+          <div class="big">CCC Student Center</div>
+          <p>Christ Community Church<br>10825 Harney St, Omaha, NE 68154</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=10825+Harney+St+Omaha+NE+68154" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+      <div class="visit-card reveal">
+        <div class="label">Questions? Reach out first.</div>
+        <div class="contact-person">
+          <div class="avatar">J</div>
+          <div><strong>Jon Bakker</strong><span>Men of Integrity Leader</span></div>
+        </div>
+        <p>Have a question, or want to talk before you come? Jon is glad to hear from you. A text works great.</p>
+        <div class="contact-lines" style="margin-top:22px">
+          <a href="sms:4023060847">402-306-0847</a>
+          <a href="mailto:builderbakes@gmail.com">builderbakes@gmail.com</a>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="sms:4023060847">Send a Text</a>
+          <a class="btn btn-ghost" href="mailto:builderbakes@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="wrap">
+    <div class="res-head reveal">
+      <div>
+        <div class="eyebrow">Resources for Continued Growth</div>
+        <h2>Keep going between Tuesdays.</h2>
+        <p class="lead">These books, podcasts and sites have shaped our leaders. They're a solid place to start.</p>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Resource categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-books" id="t-books">Books</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-podcasts" id="t-podcasts">Podcasts &amp; Video</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-filters" id="t-filters">Filters &amp; Accountability</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-sites" id="t-sites">Websites</button>
+    </div>
+
+    <div class="panel active" id="p-books" role="tabpanel" aria-labelledby="t-books">
+      <p class="panel-intro">Books that will help you understand what's driving your behavior and how recovery actually works.</p>
+      <div class="res-grid">
+        <a class="res" href="https://www.amazon.com/dp/1631466720" target="_blank" rel="noopener"><div><div class="type">Book</div><h4>Unwanted</h4><div class="by">Jay Stringer</div></div><div class="go">View &rarr;</div></a>
+        <a class="res" href="https://www.amazon.com/dp/0764215663" target="_blank" rel="noopener"><div><div class="type">Book</div><h4>Pure Desire</h4><div class="by">Ted Roberts</div></div><div class="go">View &rarr;</div></a>
+        <a class="res" href="https://a.co/d/0bjFB0He" target="_blank" rel="noopener"><div><div class="type">Book</div><h4>The Seven Desires of Every Heart</h4><div class="by">Mark &amp; Debbie Laaser</div></div><div class="go">View &rarr;</div></a>
+        <a class="res" href="https://www.amazon.com/dp/1568386214" target="_blank" rel="noopener"><div><div class="type">Book</div><h4>Out of the Shadows</h4><div class="by">Patrick Carnes</div></div><div class="go">View &rarr;</div></a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-podcasts" role="tabpanel" aria-labelledby="t-podcasts">
+      <p class="panel-intro">Listen on your commute, at the gym, or anytime you need a reminder that you're not alone.</p>
+      <div class="res-grid">
+        <a class="res" href="https://www.youtube.com/playlist?list=PLTXc7KJv_ODqB0u-HPwsWXtg03MCgyVjn" target="_blank" rel="noopener"><div><div class="type">YouTube</div><h4>Joy Recovery Radio</h4><div class="by">Video playlist</div></div><div class="go">Watch &rarr;</div></a>
+        <a class="res" href="https://podcasts.apple.com/us/podcast/joy-recovery-radio/id1793658785" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Joy Recovery Radio</h4><div class="by">Apple Podcasts</div></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://restored2more.buzzsprout.com" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Restored2More</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://faithfulandtrue.com/the-faithful-true-podcast/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Faithful &amp; True</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://recoveredman.com/category/pfr/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Recovered Man</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://puredesire.org/podcasts/" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Desire</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://www.puresexradio.com/listen.html" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Sex Radio</h4></div><div class="go">Listen &rarr;</div></a>
+        <a class="res" href="https://podcasts.apple.com/us/podcast/pure-victory-podcast/id1510639399" target="_blank" rel="noopener"><div><div class="type">Podcast</div><h4>Pure Victory Podcast</h4><div class="by">Apple Podcasts</div></div><div class="go">Listen &rarr;</div></a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-filters" role="tabpanel" aria-labelledby="t-filters">
+      <p class="panel-intro">Install a filter on every device you use, including your phone. Have reports sent to a trusted accountability partner, and ask that person before you sign them up.</p>
+      <div class="res-grid">
+        <a class="res" href="https://www.covenanteyes.com/" target="_blank" rel="noopener"><div><div class="type">Accountability</div><h4>Covenant Eyes</h4><div class="by">Screen accountability and filtering</div></div><div class="go">Visit &rarr;</div></a>
+        <a class="res" href="https://www.netnanny.com/" target="_blank" rel="noopener"><div><div class="type">Filter</div><h4>Net Nanny</h4><div class="by">Content filtering</div></div><div class="go">Visit &rarr;</div></a>
+      </div>
+    </div>
+
+    <div class="panel" id="p-sites" role="tabpanel" aria-labelledby="t-sites">
+      <p class="panel-intro">Ministries and organizations doing serious work in sexual recovery.</p>
+      <div class="res-grid">
+        <a class="res" href="https://puredesire.org/" target="_blank" rel="noopener"><div><div class="type">Website</div><h4>Pure Desire</h4></div><div class="go">Visit &rarr;</div></a>
+        <a class="res" href="https://www.faithfulandtrue.com/" target="_blank" rel="noopener"><div><div class="type">Website</div><h4>Faithful &amp; True</h4></div><div class="go">Visit &rarr;</div></a>
+        <a class="res" href="https://www.joy-recovery.com/" target="_blank" rel="noopener"><div><div class="type">Website</div><h4>Joy Recovery</h4></div><div class="go">Visit &rarr;</div></a>
+        <a class="res" href="https://www.bebroken.org/" target="_blank" rel="noopener"><div><div class="type">Website</div><h4>BeBroken</h4></div><div class="go">Visit &rarr;</div></a>
+        <a class="res" href="https://www.xxxchurch.com/" target="_blank" rel="noopener"><div><div class="type">Website</div><h4>XXXchurch</h4></div><div class="go">Visit &rarr;</div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partner">
+  <div class="wrap">
+    <div class="partner-box reveal">
+      <div>
+        <div class="eyebrow">For the Betrayed Partner</div>
+        <h2>Your healing matters too.</h2>
+        <p style="color:var(--text-dim)">If you're the wife or partner of a man in recovery, the pain you're carrying is real and deserves care of its own. These books were written with you in mind.</p>
+      </div>
+      <div class="partner-list">
+        <a href="https://www.amazon.com/dp/0800735056" target="_blank" rel="noopener"><div><strong>Intimate Deception</strong><span>Dr. Sheri Keffer</span></div><span class="arrow">View &rarr;</span></a>
+        <a href="https://www.amazon.com/dp/0982638272" target="_blank" rel="noopener"><div><strong>Rescued</strong><span>Shelley Martinkus</span></div><span class="arrow">View &rarr;</span></a>
+        <a href="https://www.amazon.com/dp/098327133X" target="_blank" rel="noopener"><div><strong>Facing Heartbreak</strong><span>Stephanie Carnes</span></div><span class="arrow">View &rarr;</span></a>
+        <a href="https://www.amazon.com/dp/1654271039" target="_blank" rel="noopener"><div><strong>From Betrayal Trauma to Healing &amp; Joy</strong><span>Marsha Means</span></div><span class="arrow">View &rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">There Is Hope</div>
+    <h2>Freedom is possible. Take the next step.</h2>
+    <p>Come this Tuesday at 6:30 PM, or send Jon a text first.</p>
+    <div class="hero-cta">
+      <a href="#visit" class="btn btn-primary">Plan Your Visit</a>
+      <a href="sms:4023060847" class="btn btn-ghost">Text Jon</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; <span id="yr">2026</span> Men of Integrity &middot; A Renewal ministry of <a href="https://cccomaha.org" target="_blank" rel="noopener">Christ Community Church</a></div>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Header state
+  const header = document.querySelector('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Mobile menu
+  const menuBtn = document.querySelector('.menu-btn');
+  const links = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    header.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); header.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', false);
+  }));
+
+  // Tabs
+  const tabs = document.querySelectorAll('.tab');
+  const selectTab = (id) => {
+    tabs.forEach(t => {
+      const on = t.id === 't-' + id;
+      t.setAttribute('aria-selected', on);
+      document.getElementById(t.getAttribute('aria-controls')).classList.toggle('active', on);
+    });
+  };
+  tabs.forEach(t => t.addEventListener('click', () => selectTab(t.id.replace('t-',''))));
+  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => selectTab(a.dataset.tab)));
+
+  // Custom HLS player for Jim's Story
+  (() => {
+    const HLS_SRC = 'https://player.vimeo.com/external/480879135.m3u8?s=e0bfe2c09b0a9a4dbffd5a3eaf962f2740c9d9f5&logging=false';
+    const FALLBACK_EMBED = 'https://player.vimeo.com/video/480879135?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+    const HLS_LIB = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js';
+
+    const player = document.getElementById('player');
+    const vid = document.getElementById('vid');
+    const cover = document.getElementById('cover');
+    const btnPlay = document.getElementById('btn-play');
+    const btnMute = document.getElementById('btn-mute');
+    const btnFs = document.getElementById('btn-fs');
+    const scrub = document.getElementById('scrub');
+    const fill = document.getElementById('scrub-fill');
+    const buf = document.getElementById('scrub-buf');
+    const tCur = document.getElementById('t-cur');
+    const tDur = document.getElementById('t-dur');
+    let started = false, hls = null, hideTimer = null;
+
+    const setState = s => player.dataset.state = s;
+    const fmt = s => {
+      if (!isFinite(s)) return '0:00';
+      s = Math.floor(s);
+      const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = String(s % 60).padStart(2, '0');
+      return h ? `${h}:${String(m).padStart(2,'0')}:${sec}` : `${m}:${sec}`;
+    };
+
+    // If the stream can't load, fall back to the standard Vimeo embed
+    const fallback = () => {
+      if (hls) { hls.destroy(); hls = null; }
+      player.innerHTML = `<iframe src="${FALLBACK_EMBED}" title="Jim's Story | Men of Integrity" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      player.dataset.state = 'embed';
+    };
+
+    const loadScript = src => new Promise((res, rej) => {
+      const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    });
+
+    const start = async () => {
+      if (started) return togglePlay();
+      started = true;
+      setState('loading');
+      try {
+        if (vid.canPlayType('application/vnd.apple.mpegurl')) {
+          vid.src = HLS_SRC; // Safari / iOS native HLS
+        } else {
+          await loadScript(HLS_LIB);
+          if (!window.Hls || !Hls.isSupported()) return fallback();
+          hls = new Hls({ capLevelToPlayerSize: true, startLevel: -1 });
+          hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) fallback(); });
+          hls.loadSource(HLS_SRC);
+          hls.attachMedia(vid);
+        }
+        vid.addEventListener('error', fallback, { once: true });
+        await vid.play();
+      } catch (e) {
+        if (e && e.name === 'NotAllowedError') setState('paused'); else fallback();
+      }
+    };
+
+    const togglePlay = () => vid.paused ? vid.play() : vid.pause();
+
+    cover.addEventListener('click', start);
+    btnPlay.addEventListener('click', togglePlay);
+    vid.addEventListener('click', togglePlay);
+
+    vid.addEventListener('playing', () => { setState('playing'); btnPlay.setAttribute('aria-label', 'Pause'); pokeUI(); });
+    vid.addEventListener('pause', () => { if (started) setState('paused'); btnPlay.setAttribute('aria-label', 'Play'); });
+    vid.addEventListener('waiting', () => setState('loading'));
+    vid.addEventListener('ended', () => { setState('paused'); });
+    vid.addEventListener('loadedmetadata', () => tDur.textContent = fmt(vid.duration));
+    vid.addEventListener('timeupdate', () => {
+      const p = vid.duration ? (vid.currentTime / vid.duration) * 100 : 0;
+      fill.style.width = p + '%';
+      tCur.textContent = fmt(vid.currentTime);
+      scrub.setAttribute('aria-valuenow', Math.round(p));
+    });
+    vid.addEventListener('progress', () => {
+      if (vid.buffered.length && vid.duration) buf.style.width = (vid.buffered.end(vid.buffered.length - 1) / vid.duration) * 100 + '%';
+    });
+
+    // Mute
+    btnMute.addEventListener('click', () => {
+      vid.muted = !vid.muted;
+      player.classList.toggle('muted', vid.muted);
+      btnMute.setAttribute('aria-label', vid.muted ? 'Unmute' : 'Mute');
+    });
+
+    // Fullscreen (iOS uses the native video fullscreen)
+    btnFs.addEventListener('click', () => {
+      if (document.fullscreenElement) return document.exitFullscreen();
+      if (player.requestFullscreen) player.requestFullscreen();
+      else if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
+    });
+    vid.addEventListener('dblclick', () => btnFs.click());
+
+    // Scrubbing
+    const seekTo = x => {
+      const r = scrub.getBoundingClientRect();
+      const p = Math.min(Math.max((x - r.left) / r.width, 0), 1);
+      if (vid.duration) vid.currentTime = p * vid.duration;
+    };
+    scrub.addEventListener('pointerdown', e => {
+      scrub.classList.add('dragging'); scrub.setPointerCapture(e.pointerId); seekTo(e.clientX);
+    });
+    scrub.addEventListener('pointermove', e => { if (scrub.classList.contains('dragging')) seekTo(e.clientX); });
+    scrub.addEventListener('pointerup', () => scrub.classList.remove('dragging'));
+    scrub.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { vid.currentTime += 5; e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { vid.currentTime -= 5; e.preventDefault(); }
+    });
+
+    // Keyboard shortcuts when the player has focus
+    player.addEventListener('keydown', e => {
+      if (!started || e.target === scrub) return;
+      if (e.key === ' ' || e.key === 'k') { e.preventDefault(); togglePlay(); }
+      if (e.key === 'm') btnMute.click();
+      if (e.key === 'f') btnFs.click();
+    });
+
+    // Auto-hide controls while playing
+    const pokeUI = () => {
+      player.classList.add('show-ui'); player.classList.remove('no-cursor');
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => {
+        if (!vid.paused) { player.classList.remove('show-ui'); player.classList.add('no-cursor'); }
+      }, 2500);
+    };
+    ['pointermove', 'touchstart'].forEach(ev => player.addEventListener(ev, pokeUI, { passive: true }));
+  })();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
