@@ -53,7 +53,7 @@
 
     <!-- concrete sign panel, in front of the tower's left edge -->
     <path d="M340 228h98v183h-98z" fill="#222851" stroke-opacity=".6" stroke-width="1.4"/>
-    <path d="M340 312 438 284M340 338 438 304M356 411 438 258" stroke-opacity=".22" stroke-width="1"/>
+    <path d="M340 310 438 271M340 337h98M389 228 436 411" stroke-opacity=".24" stroke-width="1"/>
 
     <!-- canopy -->
     <path d="M478 222h272v36H478z" fill="#0B0E20" stroke-opacity=".6" stroke-width="1.4"/>
