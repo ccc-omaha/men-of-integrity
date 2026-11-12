@@ -160,24 +160,23 @@
 {% endif %}
 
 <!-- FIRST STEPS -->
-<section id="start" class="steps-sec">
+<section id="start">
   <div class="wrap">
     <div class="reveal">
       <div class="eyebrow">{{ steps.eyebrow }}</div>
       <h2>{{ steps.heading }}</h2>
       <p class="lead">{{ steps.intro | md }}</p>
     </div>
-    <ol class="path">
+    <div class="steps">
       {% for s in steps.items %}
-      <li class="path-step reveal">
-        <div class="path-node">{{ (s.icon or "compass") | icon(26) }}</div>
-        <div class="path-n">Step {{ loop.index }}</div>
+      <div class="step reveal">
+        <div class="step-n">{{ loop.index }}</div>
         <h3>{{ s.title }}</h3>
         <p>{{ s.text | md }}</p>
         {% if s.linkText and s.linkUrl %}<a class="link" href="{{ s.linkUrl }}"{% if s.linkUrl.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ s.linkText }} &rarr;</a>{% endif %}
-      </li>
+      </div>
       {% endfor %}
-    </ol>
+    </div>
     {% if steps.reassureText %}
     <div class="reassure reveal">
       <p>{% if steps.reassureTitle %}<strong>{{ steps.reassureTitle }}</strong> {% endif %}{{ steps.reassureText | md }}</p>
@@ -247,92 +246,77 @@
       </div>
     </div>
 
-    {% if resources.featured and resources.featured.length %}
-    <div class="featured">
-      {% for r in resources.featured %}
-      <a class="feat reveal" href="{{ r.url }}" target="_blank" rel="noopener">
-        <div class="feat-ic">{{ r.type | typeicon(26) }}</div>
-        <div class="type">{{ r.type }}</div>
-        <h4>{{ r.title }}</h4>
-        {% if r.by %}<div class="by">{{ r.by }}</div>{% endif %}
-        {% if r.note %}<p>{{ r.note | md }}</p>{% endif %}
-        <div class="go">{{ r.action or "View" }} &rarr;</div>
-      </a>
+    <div class="tabs" role="tablist" aria-label="Resource categories">
+      {% for c in resources.categories %}
+      <button class="tab" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-controls="p-{{ c.name | slug }}" id="t-{{ c.name | slug }}">{{ c.name }}</button>
       {% endfor %}
     </div>
-    <button class="see-all" type="button" aria-expanded="false" aria-controls="all-res" hidden>See all {{ resCount }} resources<span class="plus" aria-hidden="true"></span></button>
-    {% endif %}
 
-    <div class="all-res" id="all-res">
-      <div class="tabs" role="tablist" aria-label="Resource categories">
-        {% for c in resources.categories %}
-        <button class="tab" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-controls="p-{{ c.name | slug }}" id="t-{{ c.name | slug }}">{{ c.name }}</button>
+    {% for c in resources.categories %}
+    <div class="panel{% if loop.first %} active{% endif %}" id="p-{{ c.name | slug }}" role="tabpanel" aria-labelledby="t-{{ c.name | slug }}">
+      {% if c.intro %}<p class="panel-intro">{{ c.intro | md }}</p>{% endif %}
+      <div class="res-grid">
+        {% for r in c.items %}
+        <a class="res" href="{{ r.url }}" target="_blank" rel="noopener"><div>{% if r.type %}<div class="type">{{ r.type | typeicon(14) }}{{ r.type }}</div>{% endif %}<h4>{{ r.title }}</h4>{% if r.by %}<div class="by">{{ r.by }}</div>{% endif %}</div><div class="go">{{ r.action or "View" }} &rarr;</div></a>
         {% endfor %}
       </div>
-
-      {% for c in resources.categories %}
-      <div class="panel{% if loop.first %} active{% endif %}" id="p-{{ c.name | slug }}" role="tabpanel" aria-labelledby="t-{{ c.name | slug }}">
-        {% if c.intro %}<p class="panel-intro">{{ c.intro | md }}</p>{% endif %}
-        <div class="res-grid">
-          {% for r in c.items %}
-          <a class="res" href="{{ r.url }}" target="_blank" rel="noopener"><div>{% if r.type %}<div class="type">{{ r.type | typeicon(14) }}{{ r.type }}</div>{% endif %}<h4>{{ r.title }}</h4>{% if r.by %}<div class="by">{{ r.by }}</div>{% endif %}</div><div class="go">{{ r.action or "View" }} &rarr;</div></a>
-          {% endfor %}
-        </div>
-      </div>
-      {% endfor %}
     </div>
-
-    {% if partners.show %}
-    <details class="partner-bar reveal">
-      <summary>
-        <span class="partner-ic">{{ "book" | icon(22) }}</span>
-        <span class="partner-txt"><span class="eyebrow">{{ partners.eyebrow }}</span><strong>{{ partners.heading }}</strong></span>
-        <span class="partner-toggle">{{ partners.books.length }} books that help<span class="plus" aria-hidden="true"></span></span>
-      </summary>
-      <div class="partner-body">
-        <p>{{ partners.text | md }}</p>
-        <div class="partner-list">
-          {% for b in partners.books %}
-          <a href="{{ b.url }}" target="_blank" rel="noopener"><div><strong>{{ b.title }}</strong><span>{{ b.author }}</span></div><span class="arrow">View &rarr;</span></a>
-          {% endfor %}
-        </div>
-      </div>
-    </details>
-    {% endif %}
+    {% endfor %}
   </div>
 </section>
 
-<!-- FAQ + CLOSING -->
-<section id="faq" class="finale">
-  <div class="topo" aria-hidden="true"></div>
-  {{ "ridge-closing.svg" | file }}
-  <div class="wrap finale-grid{% if not (faq.show and faq.items.length) %} solo{% endif %}">
-    {% if faq.show and faq.items.length %}
-    <div class="faq-col">
-      <div class="reveal">
-        <div class="eyebrow">{{ faq.eyebrow }}</div>
-        <h2>{{ faq.heading }}</h2>
+{% if partners.show %}
+<!-- PARTNERS -->
+<section class="partner">
+  <div class="wrap">
+    <div class="partner-box reveal">
+      <div>
+        <div class="eyebrow">{{ partners.eyebrow }}</div>
+        <h2>{{ partners.heading }}</h2>
+        <p style="color:var(--text-dim)">{{ partners.text | md }}</p>
       </div>
-      <div class="faq-list reveal">
-        {% for f in faq.items %}
-        <details{% if loop.first %} open{% endif %}>
-          <summary>{{ f.question }}<span class="plus" aria-hidden="true"></span></summary>
-          <div class="answer"><p>{{ f.answer | md }}</p></div>
-        </details>
+      <div class="partner-list">
+        {% for b in partners.books %}
+        <a href="{{ b.url }}" target="_blank" rel="noopener"><div><strong>{{ b.title }}</strong><span>{{ b.author }}</span></div><span class="arrow">View &rarr;</span></a>
         {% endfor %}
       </div>
     </div>
-    {% endif %}
-    <aside class="cta-card reveal">
-      <div class="cta-ic">{{ "compass" | icon(30) }}</div>
-      <div class="eyebrow">{{ closing.eyebrow }}</div>
-      <h2>{{ closing.heading }}</h2>
-      <p>{{ closing.text | md }}</p>
-      <div class="cta-actions">
-        <a href="#visit" class="btn btn-primary">{{ closing.primaryButton }}</a>
-        <a href="{{ smsHref }}" class="btn btn-ghost">{{ closing.secondaryButton }}</a>
-      </div>
-    </aside>
+  </div>
+</section>
+{% endif %}
+
+{% if faq.show and faq.items.length %}
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <div class="eyebrow">{{ faq.eyebrow }}</div>
+      <h2>{{ faq.heading }}</h2>
+    </div>
+    <div class="faq-list reveal">
+      {% for f in faq.items %}
+      <details{% if loop.first %} open{% endif %}>
+        <summary>{{ f.question }}<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer"><p>{{ f.answer | md }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="topo" aria-hidden="true"></div>
+  {{ "ridge-closing.svg" | file }}
+  <div class="wrap">
+    <div class="eyebrow">{{ closing.eyebrow }}</div>
+    <h2>{{ closing.heading }}</h2>
+    <p>{{ closing.text | md }}</p>
+    <div class="hero-cta">
+      <a href="#visit" class="btn btn-primary">{{ closing.primaryButton }}</a>
+      <a href="{{ smsHref }}" class="btn btn-ghost">{{ closing.secondaryButton }}</a>
+    </div>
   </div>
 </section>
 

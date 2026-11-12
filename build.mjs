@@ -95,7 +95,6 @@ const html = env.render("index.njk", {
   smsHref: `sms:${digits}`,
   firstName: String(M.contactName || "").split(" ")[0],
   addressShort,
-  resCount: C.resources.categories.reduce((n, c) => n + (c.items || []).length, 0),
   shareImageAbs: abs(C.settings.shareImage),
   year: new Date().getFullYear(),
 });

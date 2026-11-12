@@ -38,25 +38,9 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     });
   };
   tabs.forEach(t => t.addEventListener('click', () => selectTab(t.id.replace('t-',''))));
-  // "See all resources" toggle (full list stays in the HTML for search engines)
-  const seeAll = document.querySelector('.see-all');
-  const allRes = document.getElementById('all-res');
-  const openAll = () => { if (!allRes || !seeAll) return; allRes.classList.remove('collapsed'); seeAll.setAttribute('aria-expanded', 'true'); seeAll.firstChild.textContent = 'Hide full list'; };
-  if (seeAll && allRes) {
-    const label = seeAll.firstChild.textContent;
-    seeAll.hidden = false;
-    allRes.classList.add('collapsed');
-    seeAll.addEventListener('click', () => {
-      const open = allRes.classList.toggle('collapsed') === false;
-      seeAll.setAttribute('aria-expanded', open);
-      seeAll.firstChild.textContent = open ? 'Hide full list' : label;
-    });
-  }
-
   // Links like #tab-filters open that resource tab and scroll to Resources
   document.querySelectorAll('a[href^="#tab-"]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault();
-    openAll();
     selectTab(a.getAttribute('href').slice(5));
     document.getElementById('resources').scrollIntoView({ behavior: 'smooth' });
   }));
