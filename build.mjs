@@ -24,7 +24,8 @@ const md = t => esc(t)
     url.startsWith("http") ? `<a href="${url}" target="_blank" rel="noopener">${txt}</a>` : `<a href="${url}">${txt}</a>`)
   .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
   .replace(/\*([^*]+)\*/g, "<em>$1</em>")
-  .replace(/\n/g, "<br>");
+  .replace(/\n/g, "<br>")
+  .replace(/ ([^\s<>]{1,14})((?:<\/[a-z]+>)*)$/i, "&nbsp;$1$2");   // no orphaned last word
 const jsonscript = v => JSON.stringify(v, null, 2).replace(/</g, "\\u003c").replace(/>/g, "\\u003e").replace(/&/g, "\\u0026");
 // Tab ids come from the first word of the category name: "Filters & Accountability" -> "filters"
 const slug = t => String(t).toLowerCase().match(/[a-z0-9]+/)?.[0] || "tab";

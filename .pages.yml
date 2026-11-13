@@ -51,6 +51,7 @@ content:
         description: "The first name is used on the Text buttons (Text Jon)."
       - name: contactRole
         label: Contact role
+        description: Shown under the contact's name on the contact card.
         type: string
       - name: phone
         label: Contact cell phone
@@ -62,15 +63,19 @@ content:
         description: "Leave blank to hide the email link and button."
       - name: contactLabel
         label: Contact card label
+        description: The small all-caps line at the top of the contact card.
         type: string
       - name: contactText
         label: Contact card paragraph
+        description: The short paragraph on the contact card, above the phone and email.
         type: text
       - name: eyebrow
         label: Section small label
+        description: The small all-caps line above the meeting section heading.
         type: string
       - name: heading
         label: Section heading
+        description: The big heading of the meeting time and place section.
         type: string
       - name: showBuilding
         label: Show Student Center illustration
@@ -78,6 +83,7 @@ content:
         description: "Turn off if the group moves to a different building."
       - name: buildingCaption
         label: Illustration caption
+        description: The small caption under the Student Center illustration.
         type: string
 
   # ---------------------------------------------------------------
@@ -89,15 +95,19 @@ content:
     fields:
       - name: eyebrow
         label: Small orange label
+        description: The small orange all-caps line at the very top, above the big title.
         type: string
       - name: headline
         label: Big title, white part
+        description: The first, white part of the big title at the top of the page.
         type: string
       - name: headlineAccent
         label: Big title, orange italic part
+        description: The end of the big title, shown in orange italics.
         type: string
       - name: intro
         label: Intro paragraph
+        description: The paragraph under the big title. Use **bold**, *italic* or [link text](https://...).
         type: text
       - name: primaryButton
         label: Orange button text
@@ -121,18 +131,23 @@ content:
     fields:
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the What is Men of Integrity heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the What is Men of Integrity section.
         type: string
       - name: lead
         label: First paragraph (larger)
+        description: The larger first paragraph under the heading.
         type: text
       - name: body
         label: Second paragraph
+        description: The regular-size paragraph after the larger one.
         type: text
       - name: openNote
         label: Green dot note
+        description: The short note next to the green dot, under the paragraphs.
         type: string
       - name: verse
         label: Scripture verse
@@ -140,6 +155,7 @@ content:
         description: "Include the quotation marks. Leave blank to hide the verse card."
       - name: verseRef
         label: Scripture reference
+        description: Shown under the scripture quote, for example Proverbs 27:17.
         type: string
 
   # ---------------------------------------------------------------
@@ -151,12 +167,15 @@ content:
     fields:
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the mission heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the five commitments section.
         type: string
       - name: intro
         label: Intro paragraph
+        description: The paragraph under the mission heading.
         type: text
       - name: items
         label: Commitments
@@ -169,14 +188,17 @@ content:
         fields:
           - name: icon
             label: Icon
+            description: The small icon at the top of this commitment's card.
             type: select
             options:
               values: [shield, sprout, dawn, book, people, compass, anchor, lock]
           - name: title
             label: Title
+            description: The bold title on this commitment's card.
             type: string
           - name: text
             label: Description
+            description: The short paragraph under the title on the card.
             type: text
 
   # ---------------------------------------------------------------
@@ -188,15 +210,19 @@ content:
     fields:
       - name: show
         label: Show this section
+        description: Turn off to hide the whole story video section.
         type: boolean
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the story video heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the story video section.
         type: string
       - name: intro
         label: Intro paragraph
+        description: The paragraph next to the video.
         type: text
       - name: title
         label: Video title
@@ -204,6 +230,7 @@ content:
         description: "Shows on the video cover and in the top menu."
       - name: coverLabel
         label: Small label above the video title
+        description: The small line shown over the video cover, above its title.
         type: string
       - name: poster
         label: Cover image
@@ -227,12 +254,15 @@ content:
     fields:
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the first steps heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the first steps section.
         type: string
       - name: intro
         label: Intro paragraph
+        description: The paragraph under the first steps heading.
         type: text
       - name: items
         label: Steps
@@ -245,12 +275,15 @@ content:
         fields:
           - name: title
             label: Title
+            description: The bold title of this numbered step.
             type: string
           - name: text
             label: Description
+            description: The short paragraph under the step's title.
             type: text
           - name: linkText
             label: Link text
+            description: The text of the arrow link at the bottom of the step. Leave blank for no link.
             type: string
           - name: linkUrl
             label: Link
@@ -258,6 +291,7 @@ content:
             description: "A web address, #visit for the meeting details, or #tab- plus a resource tab's first word (example: #tab-filters)."
       - name: reassureTitle
         label: Callout bold text
+        description: The bold first words of the callout box under the steps.
         type: string
       - name: reassureText
         label: Callout text
@@ -273,12 +307,15 @@ content:
     fields:
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the resources heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the resources section.
         type: string
       - name: intro
         label: Intro paragraph
+        description: The paragraph under the resources heading.
         type: text
       - name: categories
         label: Tabs
@@ -295,9 +332,11 @@ content:
             description: "Start each tab with a different word. The first word is used for #tab- links."
           - name: intro
             label: Tab intro
+            description: The short paragraph at the top of this tab, above its list.
             type: text
           - name: items
             label: Resources
+            description: The resources listed in this tab, in order.
             type: object
             list:
               collapsible:
@@ -306,6 +345,7 @@ content:
             fields:
               - name: title
                 label: Title
+                description: The name of the resource as it appears in the list.
                 type: string
               - name: by
                 label: Author or note
@@ -317,9 +357,11 @@ content:
                 description: "Example: Book, Podcast, YouTube, Website, Filter. The matching icon is added automatically."
               - name: url
                 label: Link
+                description: Where the resource opens. Paste the full https:// address.
                 type: string
               - name: action
                 label: Link word
+                description: The word on the link button, like Visit, Read or Listen.
                 type: select
                 options:
                   values: [View, Listen, Watch, Visit]
@@ -333,18 +375,23 @@ content:
     fields:
       - name: show
         label: Show this section
+        description: Turn off to hide the whole section for betrayed partners.
         type: boolean
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above this section's heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading of the section for betrayed partners.
         type: string
       - name: text
         label: Paragraph
+        description: The paragraph under the heading.
         type: text
       - name: books
         label: Books
+        description: The recommended books listed in this section, in order.
         type: object
         list:
           collapsible:
@@ -353,12 +400,15 @@ content:
         fields:
           - name: title
             label: Title
+            description: The book title, shown in bold.
             type: string
           - name: author
             label: Author
+            description: Shown after the title.
             type: string
           - name: url
             label: Link
+            description: Where to get the book. Paste the full https:// address.
             type: string
 
   # ---------------------------------------------------------------
@@ -370,12 +420,15 @@ content:
     fields:
       - name: show
         label: Show this section
+        description: Turn off to hide the whole questions section.
         type: boolean
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the questions heading.
         type: string
       - name: heading
         label: Heading
+        description: The big heading above the questions.
         type: string
       - name: items
         label: Questions
@@ -388,9 +441,11 @@ content:
         fields:
           - name: question
             label: Question
+            description: The line people click to open the answer.
             type: string
           - name: answer
             label: Answer
+            description: Shown when the question is opened. Use **bold** or [link text](https://...).
             type: text
 
   # ---------------------------------------------------------------
@@ -402,18 +457,23 @@ content:
     fields:
       - name: eyebrow
         label: Small label above the heading
+        description: The small all-caps line above the closing heading at the bottom of the page.
         type: string
       - name: heading
         label: Heading
+        description: The big heading at the bottom of the page.
         type: string
       - name: text
         label: Paragraph
+        description: The paragraph under the closing heading.
         type: text
       - name: primaryButton
         label: Orange button text
+        description: Text of the orange button at the bottom of the page.
         type: string
       - name: secondaryButton
         label: Outline button text
+        description: Text of the outline button next to it.
         type: string
 
   # ---------------------------------------------------------------
@@ -437,6 +497,7 @@ content:
         description: "Title shown when the link is shared in a text or on social."
       - name: shareDescription
         label: Share description
+        description: The text that appears when the link is shared in a text, email or social post.
         type: text
       - name: shareImage
         label: Share image
