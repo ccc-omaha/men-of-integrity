@@ -1,37 +1,37 @@
 {
   "eyebrow": "Resources for Continued Growth",
   "heading": "Keep going between Tuesdays.",
-  "intro": "These books, podcasts and sites have shaped our leaders. They're a solid place to start.",
+  "intro": "These books, podcasts, and sites have shaped our leaders. They’re a solid place to start.",
   "categories": [
     {
       "name": "Books",
-      "intro": "Books that will help you understand what's driving your behavior and how recovery actually works.",
+      "intro": "Books that will help you understand what’s driving your behavior and how recovery actually works.",
       "items": [
         {
-          "type": "Book",
           "title": "Unwanted",
           "by": "Jay Stringer",
+          "type": "Book",
           "url": "https://www.amazon.com/dp/1631466720",
           "action": "View"
         },
         {
-          "type": "Book",
           "title": "Pure Desire",
           "by": "Ted Roberts",
+          "type": "Book",
           "url": "https://www.amazon.com/dp/0764215663",
           "action": "View"
         },
         {
-          "type": "Book",
           "title": "The Seven Desires of Every Heart",
           "by": "Mark & Debbie Laaser",
+          "type": "Book",
           "url": "https://a.co/d/0bjFB0He",
           "action": "View"
         },
         {
-          "type": "Book",
           "title": "Out of the Shadows",
           "by": "Patrick Carnes",
+          "type": "Book",
           "url": "https://www.amazon.com/dp/1568386214",
           "action": "View"
         }
@@ -39,54 +39,51 @@
     },
     {
       "name": "Podcasts & Video",
-      "intro": "Listen on your commute, at the gym, or anytime you need a reminder that you're not alone.",
+      "intro": "Listen on your commute, at the gym, or anytime you need a reminder that you’re not alone.",
       "items": [
         {
-          "type": "YouTube",
           "title": "Joy Recovery Radio",
           "by": "Video playlist",
+          "type": "YouTube",
           "url": "https://www.youtube.com/playlist?list=PLTXc7KJv_ODqB0u-HPwsWXtg03MCgyVjn",
           "action": "Watch"
         },
         {
-          "type": "Podcast",
           "title": "Joy Recovery Radio",
           "by": "Apple Podcasts",
+          "type": "Podcast",
           "url": "https://podcasts.apple.com/us/podcast/joy-recovery-radio/id1793658785",
           "action": "Listen"
         },
         {
-          "type": "Podcast",
           "title": "Restored2More",
-          "by": "",
+          "type": "Podcast",
           "url": "https://restored2more.buzzsprout.com",
           "action": "Listen"
         },
         {
-          "type": "Podcast",
           "title": "Faithful & True",
-          "by": "",
+          "type": "Podcast",
           "url": "https://www.faithfulandtrue.com/podcast",
           "action": "Listen"
         },
         {
-          "type": "Podcast",
           "title": "Recovered Man",
-          "by": "",
+          "type": "Podcast",
           "url": "https://recoveredman.com/category/pfr/",
           "action": "Listen"
         },
         {
-          "type": "YouTube",
           "title": "Pure Desire",
           "by": "Video channel",
+          "type": "YouTube",
           "url": "https://www.youtube.com/user/puredesireTV",
           "action": "Watch"
         },
         {
-          "type": "Podcast",
           "title": "Pure Victory Podcast",
           "by": "Apple Podcasts",
+          "type": "Podcast",
           "url": "https://podcasts.apple.com/us/podcast/pure-victory-podcast/id1510639399",
           "action": "Listen"
         }
@@ -97,16 +94,16 @@
       "intro": "Install a filter on every device you use, including your phone. Have reports sent to a trusted accountability partner, and ask that person before you sign them up.",
       "items": [
         {
-          "type": "Accountability",
           "title": "Covenant Eyes",
           "by": "Screen accountability and filtering",
+          "type": "Accountability",
           "url": "https://www.covenanteyes.com/",
           "action": "Visit"
         },
         {
-          "type": "Filter",
           "title": "Net Nanny",
           "by": "Content filtering",
+          "type": "Filter",
           "url": "https://www.netnanny.com/",
           "action": "Visit"
         }
@@ -117,37 +114,32 @@
       "intro": "Ministries and organizations doing serious work in sexual recovery.",
       "items": [
         {
-          "type": "Website",
           "title": "Pure Desire",
-          "by": "",
+          "type": "Website",
           "url": "https://puredesire.org/",
           "action": "Visit"
         },
         {
-          "type": "Website",
           "title": "Faithful & True",
-          "by": "",
+          "type": "Website",
           "url": "https://www.faithfulandtrue.com/",
           "action": "Visit"
         },
         {
-          "type": "Website",
           "title": "Joy Recovery",
-          "by": "",
+          "type": "Website",
           "url": "https://www.joy-recovery.com/",
           "action": "Visit"
         },
         {
-          "type": "Website",
           "title": "BeBroken",
-          "by": "",
+          "type": "Website",
           "url": "https://www.bebroken.org/",
           "action": "Visit"
         },
         {
-          "type": "Website",
           "title": "XXXchurch",
-          "by": "",
+          "type": "Website",
           "url": "https://www.xxxchurch.com/",
           "action": "Visit"
         }
