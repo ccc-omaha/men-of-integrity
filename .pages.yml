@@ -67,7 +67,7 @@ content:
         type: string
       - name: contactText
         label: Contact card paragraph
-        description: The short paragraph on the contact card, above the phone and email.
+        description: "The short paragraph on the contact card, above the phone and email. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: eyebrow
         label: Section small label
@@ -107,7 +107,7 @@ content:
         type: string
       - name: intro
         label: Intro paragraph
-        description: The paragraph under the big title. Use **bold**, *italic* or [link text](https://...).
+        description: "The paragraph under the big title. For a link, use [link text](https://...). For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: primaryButton
         label: Orange button text
@@ -139,11 +139,11 @@ content:
         type: string
       - name: lead
         label: First paragraph (larger)
-        description: The larger first paragraph under the heading.
+        description: "The larger first paragraph under the heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: body
         label: Second paragraph
-        description: The regular-size paragraph after the larger one.
+        description: "The regular-size paragraph after the larger one. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: openNote
         label: Green dot note
@@ -175,7 +175,7 @@ content:
         type: string
       - name: intro
         label: Intro paragraph
-        description: The paragraph under the mission heading.
+        description: "The paragraph under the mission heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: items
         label: Commitments
@@ -198,7 +198,7 @@ content:
             type: string
           - name: text
             label: Description
-            description: The short paragraph under the title on the card.
+            description: "The short paragraph under the title on the card. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
             type: text
 
   # ---------------------------------------------------------------
@@ -222,7 +222,7 @@ content:
         type: string
       - name: intro
         label: Intro paragraph
-        description: The paragraph next to the video.
+        description: "The paragraph next to the video. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: title
         label: Video title
@@ -262,7 +262,7 @@ content:
         type: string
       - name: intro
         label: Intro paragraph
-        description: The paragraph under the first steps heading.
+        description: "The paragraph under the first steps heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: items
         label: Steps
@@ -279,7 +279,7 @@ content:
             type: string
           - name: text
             label: Description
-            description: The short paragraph under the step's title.
+            description: "The short paragraph under the step's title. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
             type: text
           - name: linkText
             label: Link text
@@ -296,7 +296,7 @@ content:
       - name: reassureText
         label: Callout text
         type: text
-        description: "Leave blank to hide the callout."
+        description: "Leave blank to hide the callout. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
 
   # ---------------------------------------------------------------
   - name: resources
@@ -315,7 +315,7 @@ content:
         type: string
       - name: intro
         label: Intro paragraph
-        description: The paragraph under the resources heading.
+        description: "The paragraph under the resources heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: categories
         label: Tabs
@@ -332,7 +332,7 @@ content:
             description: "Start each tab with a different word. The first word is used for #tab- links."
           - name: intro
             label: Tab intro
-            description: The short paragraph at the top of this tab, above its list.
+            description: "The short paragraph at the top of this tab, above its list. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
             type: text
           - name: items
             label: Resources
@@ -387,7 +387,7 @@ content:
         type: string
       - name: text
         label: Paragraph
-        description: The paragraph under the heading.
+        description: "The paragraph under the heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: books
         label: Books
@@ -445,7 +445,7 @@ content:
             type: string
           - name: answer
             label: Answer
-            description: Shown when the question is opened. Use **bold** or [link text](https://...).
+            description: "Shown when the question is opened. For a link, use [link text](https://...). For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
             type: text
 
   # ---------------------------------------------------------------
@@ -465,7 +465,7 @@ content:
         type: string
       - name: text
         label: Paragraph
-        description: The paragraph under the closing heading.
+        description: "The paragraph under the closing heading. For italics, put one star (asterisk) on each side of the words. For bold, put two stars on each side."
         type: text
       - name: primaryButton
         label: Orange button text
